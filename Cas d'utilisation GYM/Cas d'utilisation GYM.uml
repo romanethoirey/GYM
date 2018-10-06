@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ocR5MMlzEeiFutTYCklnvQ" name="Cas d'utilisation GYM">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_orXeEMlzEeiFutTYCklnvQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_8iARUMlzEeiFutTYCklnvQ" name="Membre"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_-1R7gMlzEeiFutTYCklnvQ" name="Professionel"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_BtFPEMl0EeiFutTYCklnvQ" name="Agent"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_PobIkMl0EeiFutTYCklnvQ" name="Acceder au centre">
+    <include xmi:type="uml:Include" xmi:id="_4AP1MMmmEeiPLtqYHPS1QA" addition="_Y1ZOcMl0EeiFutTYCklnvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XFy5EMl0EeiFutTYCklnvQ" memberEnd="_XF604Ml0EeiFutTYCklnvQ _XF9RIMl0EeiFutTYCklnvQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XF3xkMl0EeiFutTYCklnvQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XF4YoMl0EeiFutTYCklnvQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XF604Ml0EeiFutTYCklnvQ" name="acceder au centre" type="_PobIkMl0EeiFutTYCklnvQ" association="_XFy5EMl0EeiFutTYCklnvQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XF9RIMl0EeiFutTYCklnvQ" name="client" type="_8iARUMlzEeiFutTYCklnvQ" association="_XFy5EMl0EeiFutTYCklnvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Y1ZOcMl0EeiFutTYCklnvQ" name="Identification du membre">
+    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_GHNI0MmnEeiPLtqYHPS1QA" name="ExtensionPoint1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jAwPMMl0EeiFutTYCklnvQ" memberEnd="_jAxdUsl0EeiFutTYCklnvQ _jAyEYMl0EeiFutTYCklnvQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jAxdUMl0EeiFutTYCklnvQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jAxdUcl0EeiFutTYCklnvQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jAxdUsl0EeiFutTYCklnvQ" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_jAwPMMl0EeiFutTYCklnvQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jAyEYMl0EeiFutTYCklnvQ" name="identification du membre" type="_Y1ZOcMl0EeiFutTYCklnvQ" association="_jAwPMMl0EeiFutTYCklnvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TJFVoMmlEeiPLtqYHPS1QA" memberEnd="_TJJAAMmlEeiPLtqYHPS1QA _TJJnEMmlEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TJHx4MmlEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TJHx4cmlEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TJJAAMmlEeiPLtqYHPS1QA" name="inscrire un client" type="_tQIsIMmnEeiPLtqYHPS1QA" association="_TJFVoMmlEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TJJnEMmlEeiPLtqYHPS1QA" name="client" type="_8iARUMlzEeiFutTYCklnvQ" association="_TJFVoMmlEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UONxsMmlEeiPLtqYHPS1QA" memberEnd="_UOQ1AMmlEeiPLtqYHPS1QA _UORcEMmlEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UOPm4MmlEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UOQN8MmlEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UOQ1AMmlEeiPLtqYHPS1QA" type="_tQIsIMmnEeiPLtqYHPS1QA" association="_UONxsMmlEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UORcEMmlEeiPLtqYHPS1QA" name="professionel" type="_-1R7gMlzEeiFutTYCklnvQ" association="_UONxsMmlEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_WG8N4MmlEeiPLtqYHPS1QA" name="Créer séance">
+    <include xmi:type="uml:Include" xmi:id="_Bv-p4MmnEeiPLtqYHPS1QA" addition="_Y1ZOcMl0EeiFutTYCklnvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_j7mQkMmlEeiPLtqYHPS1QA" memberEnd="_j7pT4MmlEeiPLtqYHPS1QA _j7p68MmlEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j7oFwMmlEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j7os0MmlEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_j7pT4MmlEeiPLtqYHPS1QA" name="créer séance" type="_WG8N4MmlEeiPLtqYHPS1QA" association="_j7mQkMmlEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_j7p68MmlEeiPLtqYHPS1QA" name="professionel" type="_-1R7gMlzEeiFutTYCklnvQ" association="_j7mQkMmlEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_lFVf0MmlEeiPLtqYHPS1QA" name="Consultation liste inscrits">
+    <include xmi:type="uml:Include" xmi:id="_XeoHoMmnEeiPLtqYHPS1QA" addition="_Y1ZOcMl0EeiFutTYCklnvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qz5lIMmlEeiPLtqYHPS1QA" memberEnd="_qz8BYcmlEeiPLtqYHPS1QA _qz8ocMmlEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qz7aUMmlEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qz8BYMmlEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qz8BYcmlEeiPLtqYHPS1QA" name="consultation liste inscrits" type="_lFVf0MmlEeiPLtqYHPS1QA" association="_qz5lIMmlEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qz8ocMmlEeiPLtqYHPS1QA" name="professionel" type="_-1R7gMlzEeiFutTYCklnvQ" association="_qz5lIMmlEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_5EdgsMmlEeiPLtqYHPS1QA" name="Consultation séances données">
+    <extend xmi:type="uml:Extend" xmi:id="_yagUsMmmEeiPLtqYHPS1QA" extendedCase="_JMsvkMmmEeiPLtqYHPS1QA" extensionLocation="_yaiJ4MmmEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_GlF0IMmmEeiPLtqYHPS1QA" memberEnd="_GlHpUMmmEeiPLtqYHPS1QA _GlIQYMmmEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GlHCQMmmEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GlHCQcmmEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GlHpUMmmEeiPLtqYHPS1QA" name="consultation séances données" type="_5EdgsMmlEeiPLtqYHPS1QA" association="_GlF0IMmmEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GlIQYMmmEeiPLtqYHPS1QA" name="client" type="_8iARUMlzEeiFutTYCklnvQ" association="_GlF0IMmmEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JMsvkMmmEeiPLtqYHPS1QA" name="Inscrire membre à une séance">
+    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_yaiJ4MmmEeiPLtqYHPS1QA" name="ExtensionPoint1"/>
+    <include xmi:type="uml:Include" xmi:id="_2gHfMMmmEeiPLtqYHPS1QA" addition="_Y1ZOcMl0EeiFutTYCklnvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_W8ijsMmmEeiPLtqYHPS1QA" name="Confirmer présence membre à la séance">
+    <include xmi:type="uml:Include" xmi:id="_46tSUMmmEeiPLtqYHPS1QA" addition="_Y1ZOcMl0EeiFutTYCklnvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fVHYMMmmEeiPLtqYHPS1QA" memberEnd="_fVJNYcmmEeiPLtqYHPS1QA _fVJ0cMmmEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fVImUMmmEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fVJNYMmmEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fVJNYcmmEeiPLtqYHPS1QA" name="confirmer présence membre à la séance" type="_W8ijsMmmEeiPLtqYHPS1QA" association="_fVHYMMmmEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fVJ0cMmmEeiPLtqYHPS1QA" name="client" type="_TJFVoMmlEeiPLtqYHPS1QA" association="_fVHYMMmmEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_tQIsIMmnEeiPLtqYHPS1QA" name="Créer un compte"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zxMlYMmnEeiPLtqYHPS1QA" memberEnd="_zxOakMmnEeiPLtqYHPS1QA _zxPBoMmnEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zxNzgMmnEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zxNzgcmnEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zxOakMmnEeiPLtqYHPS1QA" name="créer un compte" type="_tQIsIMmnEeiPLtqYHPS1QA" association="_zxMlYMmnEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zxPBoMmnEeiPLtqYHPS1QA" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_zxMlYMmnEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6G-bsMmnEeiPLtqYHPS1QA" memberEnd="_6HAQ4MmnEeiPLtqYHPS1QA _6HAQ4cmnEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6G_p0MmnEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6G_p0cmnEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6HAQ4MmnEeiPLtqYHPS1QA" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_6G-bsMmnEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6HAQ4cmnEeiPLtqYHPS1QA" name="consultation séances données" type="_5EdgsMmlEeiPLtqYHPS1QA" association="_6G-bsMmnEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_63sG8MmnEeiPLtqYHPS1QA" memberEnd="_63t8IcmnEeiPLtqYHPS1QA _63ujMMmnEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_63tVEMmnEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_63t8IMmnEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_63t8IcmnEeiPLtqYHPS1QA" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_63sG8MmnEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_63ujMMmnEeiPLtqYHPS1QA" name="acceder au centre" type="_PobIkMl0EeiFutTYCklnvQ" association="_63sG8MmnEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7tUHYMmnEeiPLtqYHPS1QA" memberEnd="_7tV8ksmnEeiPLtqYHPS1QA _7tWjoMmnEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7tV8kMmnEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7tV8kcmnEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7tV8ksmnEeiPLtqYHPS1QA" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_7tUHYMmnEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7tWjoMmnEeiPLtqYHPS1QA" name="confirmer présence membre à la séance" type="_W8ijsMmmEeiPLtqYHPS1QA" association="_7tUHYMmnEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8zaMwMmnEeiPLtqYHPS1QA" memberEnd="_8zcB8MmnEeiPLtqYHPS1QA _8zcB8cmnEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8zba4MmnEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zba4cmnEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8zcB8MmnEeiPLtqYHPS1QA" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_8zaMwMmnEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8zcB8cmnEeiPLtqYHPS1QA" name="consultation liste inscrits" type="_lFVf0MmlEeiPLtqYHPS1QA" association="_8zaMwMmnEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9xb7QMmnEeiPLtqYHPS1QA" memberEnd="_9xdJYMmnEeiPLtqYHPS1QA _9xdJYcmnEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9xciUMmnEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9xciUcmnEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9xdJYMmnEeiPLtqYHPS1QA" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_9xb7QMmnEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9xdJYcmnEeiPLtqYHPS1QA" name="créer séance" type="_WG8N4MmlEeiPLtqYHPS1QA" association="_9xb7QMmnEeiPLtqYHPS1QA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JX2kwMmoEeiPLtqYHPS1QA" memberEnd="_JX3y4cmoEeiPLtqYHPS1QA _JX4Z8MmoEeiPLtqYHPS1QA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JX3L0MmoEeiPLtqYHPS1QA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JX3y4MmoEeiPLtqYHPS1QA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JX3y4cmoEeiPLtqYHPS1QA" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_JX2kwMmoEeiPLtqYHPS1QA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JX4Z8MmoEeiPLtqYHPS1QA" name="inscrire membre à une séance" type="_JMsvkMmmEeiPLtqYHPS1QA" association="_JX2kwMmoEeiPLtqYHPS1QA"/>
+  </packagedElement>
+</uml:Model>
