@@ -134,4 +134,5 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_JX3y4cmoEeiPLtqYHPS1QA" name="agent" type="_BtFPEMl0EeiFutTYCklnvQ" association="_JX2kwMmoEeiPLtqYHPS1QA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_JX4Z8MmoEeiPLtqYHPS1QA" name="inscrire membre à une séance" type="_JMsvkMmmEeiPLtqYHPS1QA" association="_JX2kwMmoEeiPLtqYHPS1QA"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Device" xmi:id="_73WnIM1rEeiQ6fGRf0VNgg" name="Logiciel du Gym"/>
 </uml:Model>
