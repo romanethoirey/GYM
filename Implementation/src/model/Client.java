@@ -1,14 +1,17 @@
 package model;
 
+import exception.MauvaisFormatClientException;
+
 public abstract class Client {//TODO informations personnelles
 
-    private Integer numeroClient;// unique a chaque Client
+    private Integer numero;// unique a chaque Client
 
-    public Client(Integer numeroClient) {
-        this.numeroClient = numeroClient;
+    public Client(String numero) throws MauvaisFormatClientException {
+        if(numero.length() != 9){throw new MauvaisFormatClientException("Numero de client de mauvaise longueur"); }
+        this.numero = Integer.getInteger(numero);
     }
 
     public Integer getNumeroClient() {
-        return numeroClient;
+        return this.numero;
     }
 }

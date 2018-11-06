@@ -1,11 +1,15 @@
 package model;
 
+import exception.MauvaisFormatClientException;
+import exception.MauvaisFormatMembreException;
+
 public class Membre extends Client {
 
     public String status;
 
-    public Membre(Integer numeroClient, String status) {
-        super(numeroClient);
+    public Membre(String numeroClient, String status) throws MauvaisFormatClientException {
+            super(numeroClient);
+
         this.status = status;
     }
 
