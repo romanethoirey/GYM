@@ -1,6 +1,12 @@
-public class Main {
+import controller.GymController;
 
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        GymController gymController = new GymController();
+
+        gymController.menuPrincipal();
     }
+
+    public void loadMockData(){}
 }
