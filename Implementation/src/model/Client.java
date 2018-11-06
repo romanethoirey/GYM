@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Client {
+public abstract class Client {//TODO informations personnelles
 
     private Integer numeroClient;// unique a chaque Client
 
