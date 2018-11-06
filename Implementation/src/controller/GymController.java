@@ -5,7 +5,6 @@ import service.GymService;
 public class GymController {
 
     GymService gymService = new GymService();
-    final Integer NOMBRE_CAS_DUTILISATION=8; //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
 
     public void menuPrincipal() {
 
@@ -13,7 +12,7 @@ public class GymController {
 
             gymService.printMenuPrincipal();//(etat);
 
-            switch (gymService.menuUserInput(NOMBRE_CAS_DUTILISATION)) {
+            switch (gymService.menuUserInput(gymService.NOMBRE_CAS_DUTILISATION)) {
                 case 1:
                     System.out.println("Créer un nouveau compte au gym.");
                     break;

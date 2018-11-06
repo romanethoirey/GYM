@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class GymService {
 
+    public final static Integer NOMBRE_CAS_DUTILISATION=8; //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
+
+    public enum status{Suspendu, Valide}//Status possible d'un membre
+
     public Integer intUserInput(){
             Scanner sc = new Scanner(System.in);
             try{
