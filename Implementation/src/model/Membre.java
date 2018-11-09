@@ -1,21 +1,20 @@
 package model;
 
 import exception.MauvaisFormatClientException;
+import service.GymService;
 
 public class Membre extends Client {
 
-    public Integer status;
+    public GymService.status status;
 
-    public Membre(String numeroClient, String status) throws MauvaisFormatClientException {
-            super(numeroClient);
-        this.status = Integer.getInteger(status);
+    public Membre(String prenom, String nom, String email, GymService.status status, GymService gymService, Clients clients) {
+        super(prenom, nom, email, gymService, clients);
+        this.status = status;
     }
 
-    public Integer getStatus() {
+    public GymService.status getStatus() {
         return status;
     }
 
-    public void setStringStatus(String status) {
-        this.status = Integer.getInteger(status);
-    }
+    public void setStringStatus(GymService.status status) {this.status =status; }
 }

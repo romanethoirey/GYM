@@ -1,10 +1,20 @@
 package controller;
 
+import exception.MauvaisFormatClientException;
+import exception.MauvaisFormatMembreException;
+import model.*;
 import service.GymService;
+
+import java.util.ArrayList;
+
+import static service.GymService.status.Valide;
 
 public class GymController {
 
     GymService gymService = new GymService();
+    Membres membres = new Membres();
+    Professionnels professionnels = new Professionnels();
+    Clients clients = new Clients(membres, professionnels);
 
     public void menuPrincipal() {
 
@@ -14,7 +24,7 @@ public class GymController {
 
             switch (gymService.menuUserInput(gymService.NOMBRE_CAS_DUTILISATION)) {
                 case 1:
-                    System.out.println("Créer un nouveau compte au gym.");
+                    nouveauCompte();
                     break;
                 case 2:
                     System.out.println("Identification du Client.");
@@ -42,5 +52,49 @@ public class GymController {
                     break;
             }
         }
+    }
+
+    public void nouveauCompte(){
+        String[] informationsPersonnelles = informationsPersonnelles();
+        gymService.printTypeClient();//(etat);
+
+        switch (gymService.menuUserInput(2)){//paiement seulement si client
+            case 1://Membre
+                if(gymService.paiementInput().equals("y")){
+                        Membre membre = new Membre(
+                                informationsPersonnelles[0],//Prenom
+                                informationsPersonnelles[1],//Nom
+                                informationsPersonnelles[2],//Email
+                                GymService.status.Valide,//status
+                                gymService,
+                                clients);
+
+                    membres.addListeMembres(membre);
+
+                    gymService.printOperationComplete();
+                }else{
+                    gymService.printOperationAnnule();
+                }
+                break;
+            case 2://Professionnel
+                    Professionnel professionnel = new Professionnel(
+                            informationsPersonnelles[0],//Prenom
+                            informationsPersonnelles[1],//Nom
+                            informationsPersonnelles[2],//Email
+                            gymService,
+                            clients);
+
+                professionnels.addListeProfessionnels(professionnel);
+
+                gymService.printOperationComplete();
+                break;
+        }
+    }
+
+    private String[] informationsPersonnelles(){
+        return new String[]{
+                gymService.informationPersonnellesInput("prenom"),
+                gymService.informationPersonnellesInput("nom"),
+                gymService.informationPersonnellesInput("email")};
     }
 }

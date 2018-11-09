@@ -18,6 +18,28 @@ public class GymService {
             }
     }
 
+    public Long randomLongLengthN(int n){
+        return (long)(Math.random() * (long) Math.pow(10, n - 1) * 9) + (long) Math.pow(10, n - 1);
+    }
+
+    public String stringUserInput(){
+        Scanner sc = new Scanner(System.in); // scanner pour userinput
+        try{
+            return sc.nextLine();
+        }catch (InputMismatchException e){//TODO Faire le bon exception handling
+            return "";
+        }
+    }
+
+    public String informationPersonnellesInput(String attribut){
+        while(true){//boucle jusqu'a entree valide
+            printInformationPersonnellesInput(attribut);
+            String input = stringUserInput();
+            if( !input.isEmpty()){return input;}//dans le range des cas d'utilisation
+            printEntreeErronee();
+        }
+    }
+
     public Integer menuUserInput(Integer max){
         while(true){//boucle jusqu'a entree valide
             printSelectionMenu();
@@ -27,15 +49,14 @@ public class GymService {
         }
     }
 
-//    public String StringUserInput(){
-//        Scanner sc = new Scanner(System.in); // scanner pour userinput
-//        printSelectionMenu();
-//        try{
-//            return sc.nextLine();
-//        }catch (InputMismatchException e){
-//            return "";
-//        }
-//    }
+    public String paiementInput(){
+        while(true){//boucle jusqu'a entree valide
+            printPaiementInput();
+            String input = stringUserInput();
+            if( input.equals("y") || input.equals("n") ){return input;}//dans le range des cas d'utilisation
+            printEntreeErronee();
+        }
+    }
 
     public void printMenuPrincipal() {
         System.out.println("" +// TODO mettre le texte dans une fichier separe ?
@@ -49,13 +70,33 @@ public class GymService {
                 "8) Confirmer la présence du Membre à une séance de service.");
     }
 
-    public void printEntreeErronee(){
-        System.out.println("\nEntree Erronee"); // TODO Loop pour essayer une autre entree
+    public void printTypeClient() {
+        System.out.println("" +// TODO mettre le texte dans une fichier separe ?
+                "Le nouveau client est :\n"+
+                "1) Un nouveau membre.\n" +
+                "2) Un nouveau professionnel.\n");
     }
 
-    private void printSelectionMenu(){
-        System.out.println("Veuiller selectionner le numero d'une des options ci-dessus"); // TODO Loop pour essayer une autre entree
+    public void printEntreeErronee(){
+        System.out.println("\nEntree Erronee."); //
     }
+
+    public void printOperationAnnule(){
+        System.out.println("\nOperation Annule."); //
+    }
+
+    public void printOperationComplete(){
+        System.out.println("\nOperation Complete."); //
+    }
+
+    public void printPaiementInput(){
+        System.out.println("\nPaiement complete ? (y/n)");
+    }
+
+    private void printSelectionMenu(){ System.out.println("Veuiller selectionner le numero d'une des options ci-dessus.");}
+
+    private void printInformationPersonnellesInput(String attribut){System.out.println("Veuiller inscrire le " + attribut + " du nouveau client.");}
+
 }
 
 

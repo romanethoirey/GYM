@@ -1,17 +1,25 @@
 package model;
 
-import exception.MauvaisFormatClientException;
+import service.GymService;
 
 public abstract class Client {//TODO informations personnelles
 
-    private Integer numero;// unique a chaque Client
+    private Long numero;// unique a chaque Client
+    private String prenom;
+    private String nom;
+    private String email;
 
-    public Client(String numero) throws MauvaisFormatClientException {
-        if(numero.length() != 9){throw new MauvaisFormatClientException("Numero de client de mauvaise longueur"); }
-        this.numero = Integer.getInteger(numero);
+    public Client(String prenom, String nom, String email, GymService gymService, Clients clients) {
+        while(true){
+            this.numero = gymService.randomLongLengthN(9);
+            if(clients.getListeClients().stream().filter(client->client.numero.equals(this.numero)).count() == 0){ break;}//verification que le numero genere n'existe pas
+        }
+        this.prenom = prenom;
+        this.nom = nom;
+        this.email = email;
     }
 
-    public Integer getNumeroClient() {
+    public Long getNumeroClient() {
         return this.numero;
     }
 }

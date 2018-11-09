@@ -6,14 +6,19 @@ import java.util.List;
 public class Clients {
 
     private List<Client> listeClients;
+    private Membres membres;
+    private Professionnels professionnels;
 
     public Clients(Membres membres, Professionnels professionnels) {
+        this.membres = membres;
+        this.professionnels = professionnels;
         this.listeClients = new ArrayList<Client>();
-        this.listeClients.addAll(membres.getListeMembres());
-        this.listeClients.addAll(professionnels.getListeProfessionnels());
+
     }
 
     public List<Client> getListeClients() {
+        this.listeClients.addAll(this.membres.getListeMembres());
+        this.listeClients.addAll(this.professionnels.getListeProfessionnels());
         return listeClients;
     }
 }
