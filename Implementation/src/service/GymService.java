@@ -47,9 +47,8 @@ public class GymService {
         }
     }
 
-    public String paiementInput(){
+    public String yesNoInput(){
         while(true){//boucle jusqu'a entree valide
-            printPaiementInput();
             String input = stringUserInput();
             if( input.equals("y") || input.equals("n") ){return input;}//dans le range des cas d'utilisation
             printEntreeErronee();
@@ -91,6 +90,18 @@ public class GymService {
 
     public void printPaiementInput(){
         System.out.println("\nPaiement complete ? (y/n)");
+    }
+
+    public void printMockData(){
+        System.out.println("\nVoulez vous initialiser le logiciel en mode demo (creation de mock data) ? (y/n)");
+    }
+
+    public void printOuvertureTourniquet(){
+        System.out.println("\nVeuillez ouvrir le tourniquet.");
+    }
+
+    public void printAucuneSeances(){
+        System.out.println("\nAucunes seances.");
     }
 
     private void printSelectionMenu(){ System.out.println("\nVeuiller selectionner le numero d'une des options ci-dessus.");}

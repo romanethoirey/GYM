@@ -17,4 +17,8 @@ public class Membre extends Client {
     }
 
     public void setStringStatus(GymService.Status status) {this.status =status; }
+
+    public Long getNumeroMembre(){
+        return super.getNumeroClient();
+    }
 }

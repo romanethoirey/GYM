@@ -21,4 +21,12 @@ public class Clients {
         this.listeClients.addAll(this.professionnels.getListeProfessionnels());
         return listeClients;
     }
+
+    public Client getClient(Long numeroClient){
+        return this.listeClients
+                .stream()
+                .filter(client -> client.getNumeroClient().equals(numeroClient))
+                .findAny()
+                .orElse(null);
+    }
 }
