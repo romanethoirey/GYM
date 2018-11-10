@@ -32,7 +32,7 @@ public class Seance {
         this.heureSeance = LocalTime.parse(heureSeance, DateTimeFormatter.ofPattern("HH:mm"));
 
         if(recurHebdo.size() != 7 || // Si pas exactement 7 jours
-           Integer.getInteger(capacite) > 30 || // si capacite de plus de 30 membres
+           Integer.parseInt(capacite) > 30 || // si capacite de plus de 30 membres
            numeroProfessionnel.length()!=9 ||//si longueur invalide
            Float.valueOf(frais) > 100.00 || Float.valueOf(frais) < 0 ||//si valeur trop grande ou sous 0
            commentaire.length() > 100// si longueur du commentaire plus de 100
@@ -40,11 +40,14 @@ public class Seance {
 
         while(true){
             this.code = gymService.randomLongLengthN(7);
-            if(seances.getListeSeances().stream().filter(seance->seance.code.equals(this.code)).count() == 0){ break;}//verification que le numero genere n'existe pas
+            if(seances
+                    .getListeSeances()
+                    .stream()
+                    .filter(seance->seance.code.equals(this.code)).count() == 0){ break;}//verification que le numero genere n'existe pas
         }
         this.recurHebdo = recurHebdo;
-        this.capacite = Long.getLong(capacite);
-        this.numeroProfessionnel = Long.getLong(numeroProfessionnel);
+        this.capacite = Long.parseLong(capacite);
+        this.numeroProfessionnel = Long.parseLong(numeroProfessionnel);
         this.frais = frais;
         this.Commentaire = commentaire;
         this.listeParticipants = new ArrayList<Membre>();

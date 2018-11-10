@@ -19,6 +19,10 @@ public class Professionnels {
     }
 
     public Professionnel getProfessionnel(int numeroProfessionnel){
-        return listeProfessionnels.stream().filter(professionnel -> professionnel.getNumeroClient().equals(numeroProfessionnel)).findAny().orElse(null);
+        return listeProfessionnels
+                .stream()
+                .filter(professionnel -> professionnel.getNumeroClient().equals(numeroProfessionnel))
+                .findAny()
+                .orElse(null);
     }
 }

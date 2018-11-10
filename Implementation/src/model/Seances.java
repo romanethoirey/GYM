@@ -20,6 +20,10 @@ public class Seances {
     }
 
     public Seance getSceance(int numeroSeance){
-        return this.listeSeances.stream().filter(sceance -> sceance.getCode().equals(numeroSeance)).findAny().orElse(null);
+        return this.listeSeances
+                .stream()
+                .filter(sceance -> sceance.getCode().equals(numeroSeance))
+                .findAny()
+                .orElse(null);
     }
 }

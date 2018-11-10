@@ -5,16 +5,16 @@ import service.GymService;
 
 public class Membre extends Client {
 
-    public GymService.status status;
+    private GymService.Status status;
 
-    public Membre(String prenom, String nom, String email, GymService.status status, GymService gymService, Clients clients) {
-        super(prenom, nom, email, gymService, clients);
+    public Membre(String prenom, String nom, String email, GymService.Status status, GymService gymService, Clients clients) {
+        super(prenom, nom, email, gymService, clients, "membre");
         this.status = status;
     }
 
-    public GymService.status getStatus() {
+    public GymService.Status getStatus() {
         return status;
     }
 
-    public void setStringStatus(GymService.status status) {this.status =status; }
+    public void setStringStatus(GymService.Status status) {this.status =status; }
 }

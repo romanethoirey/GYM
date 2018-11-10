@@ -7,7 +7,9 @@ public class GymService {
 
     public final static Integer NOMBRE_CAS_DUTILISATION=8; //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
 
-    public enum status{Suspendu, Valide}//Status possible d'un membre
+    public enum Status{Suspendu, Valide, Inexistant}//Status possible d'un membre
+
+    //////////INPUT//////////
 
     public Integer intUserInput(){
             Scanner sc = new Scanner(System.in);
@@ -16,10 +18,6 @@ public class GymService {
             }catch (InputMismatchException e){
                 return -1;
             }
-    }
-
-    public Long randomLongLengthN(int n){
-        return (long)(Math.random() * (long) Math.pow(10, n - 1) * 9) + (long) Math.pow(10, n - 1);
     }
 
     public String stringUserInput(){
@@ -58,6 +56,8 @@ public class GymService {
         }
     }
 
+    //////////PRINT//////////
+
     public void printMenuPrincipal() {
         System.out.println("" +// TODO mettre le texte dans une fichier separe ?
                 "1) Créer un nouveau compte au gym.\n" +
@@ -93,9 +93,19 @@ public class GymService {
         System.out.println("\nPaiement complete ? (y/n)");
     }
 
-    private void printSelectionMenu(){ System.out.println("Veuiller selectionner le numero d'une des options ci-dessus.");}
+    private void printSelectionMenu(){ System.out.println("\nVeuiller selectionner le numero d'une des options ci-dessus.");}
 
-    private void printInformationPersonnellesInput(String attribut){System.out.println("Veuiller inscrire le " + attribut + " du nouveau client.");}
+    private void printInformationPersonnellesInput(String attribut){System.out.println("\nVeuiller entrer le " + attribut + " du client.");}
+
+    public void printStatusClient(Status status){System.out.println("\nLe client avec le numero entre est " + status.toString() );}
+
+
+    //////////AUTRES//////////
+
+    public Long randomLongLengthN(int n){
+        return (long)(Math.random() * (long) Math.pow(10, n - 1) * 9) + (long) Math.pow(10, n - 1);
+    }
+
 
 }
 

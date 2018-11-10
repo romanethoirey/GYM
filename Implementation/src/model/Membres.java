@@ -20,6 +20,10 @@ public class Membres {
     }
 
     public Membre getMembre(int numeroMembre){
-        return listeMembres.stream().filter(membre -> membre.getNumeroClient().equals(numeroMembre)).findAny().orElse(null);
+        return listeMembres
+                .stream()
+                .filter(membre -> membre.getNumeroClient().equals(numeroMembre))
+                .findAny()
+                .orElse(null);
     }
 }

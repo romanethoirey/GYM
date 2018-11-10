@@ -7,7 +7,7 @@ import service.GymService;
 
 import java.util.ArrayList;
 
-import static service.GymService.status.Valide;
+import static service.GymService.Status.Valide;
 
 public class GymController {
 
@@ -27,7 +27,7 @@ public class GymController {
                     nouveauCompte();
                     break;
                 case 2:
-                    System.out.println("Identification du Client.");
+                    gymService.printStatusClient(identificationClient());
                     break;
                 case 3:
                     System.out.println("Accéder au gym.");
@@ -65,7 +65,7 @@ public class GymController {
                                 informationsPersonnelles[0],//Prenom
                                 informationsPersonnelles[1],//Nom
                                 informationsPersonnelles[2],//Email
-                                GymService.status.Valide,//status
+                                GymService.Status.Valide,//status
                                 gymService,
                                 clients);
 
@@ -88,6 +88,30 @@ public class GymController {
 
                 gymService.printOperationComplete();
                 break;
+        }
+    }
+
+    public GymService.Status identificationClient(){
+
+        String inputsa = gymService.informationPersonnellesInput("numero");
+
+        Long numeroClient = Long.parseLong(inputsa);
+
+        Client client = clients
+                .getListeClients()
+                .stream()
+                .filter(clt->clt.getNumeroClient().equals(numeroClient))
+                .findAny()
+                .orElse(null);
+
+        if(client != null){
+            if(client.getType().equals("membre")){
+                return ((Membre)client).getStatus();
+            }else{
+                return GymService.Status.Valide;
+            }
+        }else {
+            return GymService.Status.Inexistant;
         }
     }
 
