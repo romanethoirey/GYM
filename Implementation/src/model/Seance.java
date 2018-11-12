@@ -52,6 +52,8 @@ public class Seance {
         this.frais = frais;
         this.Commentaire = commentaire;
         this.listeParticipants = new ArrayList<Membre>();
+        this.listeInscriptionsSeance = new ArrayList<InscriptionSeance>();
+        this.listePresencesSeance = new ArrayList<PresenceSeance>();
     }
 
     public Long getCode() {
@@ -66,8 +68,33 @@ public class Seance {
         return frais;
     }
 
+    public Long getNumeroProfessionnel() {
+        return numeroProfessionnel;
+    }
+
     public void addMembreParticipant(Membre membre) throws TropParticipantsException{
         if(this.listeParticipants.size()<this.capacite){this.listeParticipants.add(membre);}
         else{throw new TropParticipantsException("La limite de participant est deja atteinte.");}
+    }
+
+    public void addInscription(InscriptionSeance inscriptionSeance) throws TropParticipantsException{
+        if(this.listeInscriptionsSeance.size()<this.capacite){this.listeInscriptionsSeance.add(inscriptionSeance);}
+        else{throw new TropParticipantsException("La limite d'inscriptions est deja atteinte.");}
+    }
+
+    public ArrayList<InscriptionSeance> getListeInscriptionsSeance() {
+        return this.listeInscriptionsSeance;
+    }
+
+    public void addPresence(PresenceSeance presenceSeance){
+        this.listePresencesSeance.add(presenceSeance);
+    }
+
+    public ArrayList<PresenceSeance> getListePresenceSeance() {
+        return this.listePresencesSeance;
+    }
+
+    public boolean membreInscrit(Long numeroMembre){
+        return this.listeInscriptionsSeance.stream().anyMatch(inscription->inscription.getNumeroMembre().equals(numeroMembre));
     }
 }

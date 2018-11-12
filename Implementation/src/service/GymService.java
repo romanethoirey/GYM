@@ -1,13 +1,16 @@
 package service;
 
+import model.Seance;
+
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GymService {
 
-    public final static Integer NOMBRE_CAS_DUTILISATION=8; //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
+    public final static Integer NOMBRE_CAS_DUTILISATION=6; //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
 
-    public enum Status{Suspendu, Valide, Inexistant}//Status possible d'un membre
+    public enum Status{Suspendu, Valide, Inexistant, Expire}//Status possible d'un membre
 
     //////////INPUT//////////
 
@@ -33,7 +36,16 @@ public class GymService {
         while(true){//boucle jusqu'a entree valide
             printInformationPersonnellesInput(attribut);
             String input = stringUserInput();
-            if( !input.isEmpty()){return input;}//dans le range des cas d'utilisation
+            if( !input.isEmpty() || attribut.equals("commentaire")){return input;}//dans le range des cas d'utilisation
+            printEntreeErronee();
+        }
+    }
+
+    public String informationSeanceInput(String attribut){
+        while(true){//boucle jusqu'a entree valide
+            printSeanceInput(attribut);
+            String input = stringUserInput();
+            if( !input.isEmpty() || attribut.equals("commentaire")){return input;}//dans le range des cas d'utilisation
             printEntreeErronee();
         }
     }
@@ -60,13 +72,11 @@ public class GymService {
     public void printMenuPrincipal() {
         System.out.println("" +// TODO mettre le texte dans une fichier separe ?
                 "1) Créer un nouveau compte au gym.\n" +
-                "2) Identification du Client.\n" +
-                "3) Accéder au gym.\n" +
-                "4) Inscrire un Membre à une séance de service.\n" +
-                "5) Consulter les inscriptions aux séances de service (pour le Professionnel).\n" +
-                "6) Créer une séance de service.\n" +
-                "7) Consulter la liste des séances de service (pour le Membre).\n" +
-                "8) Confirmer la présence du Membre à une séance de service.");
+                "2) Accéder au gym.\n" +
+                "3) Consulter les inscriptions aux séances de service (pour le Professionnel).\n" +
+                "4) Créer une séance de service.\n" +
+                "5) Consulter la liste des séances de service pour une possible inscription.\n" +
+                "6) Confirmer la présence du Membre à une séance de service.");
     }
 
     public void printTypeClient() {
@@ -80,6 +90,10 @@ public class GymService {
         System.out.println("\nEntree Erronee."); //
     }
 
+    public void printMembreNonInscrit(){
+        System.out.println("\nLe membre n'est pas inscrit a cette seance, acces refuse."); //
+    }
+
     public void printOperationAnnule(){
         System.out.println("\nOperation Annule."); //
     }
@@ -90,6 +104,10 @@ public class GymService {
 
     public void printPaiementInput(){
         System.out.println("\nPaiement complete ? (y/n)");
+    }
+
+    public void printChoixInscription(){
+        System.out.println("\nLe client veut-il s'inscrire ? (y/n)");
     }
 
     public void printMockData(){
@@ -108,8 +126,20 @@ public class GymService {
 
     private void printInformationPersonnellesInput(String attribut){System.out.println("\nVeuiller entrer le " + attribut + " du client.");}
 
+    public void printNumeroNouceauClient(Long attribut){System.out.println("\nLe numero du nouveau client est :  " + attribut+ ".");}
+
+    public void printInfosSeance(Seance seance){System.out.println("Titre : "+seance.getTitre()+" Prix : "+seance.getFrais() + "$ Code de seance : "+seance.getCode());}
+
+    public void printSeanceInput(String attribut){System.out.println("\nVeuiller entrer le " + attribut + " de la seance.");}
+
+    public void printFraisSeance(String attribut){System.out.println("\nLe prix de la Seance est de " + attribut + " $.");}
+
     public void printStatusClient(Status status){System.out.println("\nLe client avec le numero entre est " + status.toString() );}
 
+    public void printInfosInscriptionsSeance(Seance seance){
+        System.out.println("Titre : "+seance.getTitre());
+        seance.getListeInscriptionsSeance().stream().forEach(inscription ->System.out.println(inscription.toString()));
+    }
 
     //////////AUTRES//////////
 
@@ -117,6 +147,18 @@ public class GymService {
         return (long)(Math.random() * (long) Math.pow(10, n - 1) * 9) + (long) Math.pow(10, n - 1);
     }
 
+    public ArrayList<Boolean> boolStringToArray(String string){
+        ArrayList<Boolean> boolArray = new ArrayList<Boolean>();
+
+        for(int i=0; i<string.length();i++){
+            if(string.charAt(i) == '0'){
+                boolArray.add(false);
+            }else if(string.charAt(i) == '1'){
+                boolArray.add(true);
+            }
+        }
+        return boolArray;
+    }
 
 }
 

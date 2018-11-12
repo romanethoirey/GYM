@@ -9,8 +9,9 @@ public abstract class Client {//TODO informations personnelles
     private String prenom;
     private String nom;
     private String email;
+    private GymService.Status status;
 
-    public Client(String prenom, String nom, String email, GymService gymService, Clients clients, String type) {
+    public Client(String prenom, String nom, String email, GymService gymService, Clients clients, String type, GymService.Status status) {
         while(true){
             this.numero = gymService.randomLongLengthN(9);
             if(clients
@@ -23,6 +24,9 @@ public abstract class Client {//TODO informations personnelles
         this.prenom = prenom;
         this.nom = nom;
         this.email = email;
+        this.status = status;
+
+        gymService.printNumeroNouceauClient(this.getNumeroClient());
     }
 
     public String getType() {
@@ -32,4 +36,11 @@ public abstract class Client {//TODO informations personnelles
     public Long getNumeroClient() {
         return this.numero;
     }
+
+    public GymService.Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(GymService.Status status) {this.status =status; }
+
 }

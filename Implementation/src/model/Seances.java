@@ -19,7 +19,7 @@ public class Seances {
         listeSeances.add(Seance);
     }
 
-    public Seance getSceance(int numeroSeance){
+    public Seance getSceance(long numeroSeance){
         return this.listeSeances
                 .stream()
                 .filter(sceance -> sceance.getCode().equals(numeroSeance))

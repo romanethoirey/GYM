@@ -23,7 +23,7 @@ public class Clients {
     }
 
     public Client getClient(Long numeroClient){
-        return this.listeClients
+        return this.getListeClients()//TODO solve bug ou les membres osnt ajoute plusieurs fois ..
                 .stream()
                 .filter(client -> client.getNumeroClient().equals(numeroClient))
                 .findAny()
