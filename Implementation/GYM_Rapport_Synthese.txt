@@ -1,0 +1,26 @@
+GYM_Rapport_Synthese
+
+
+Nom du professionnel: Daigle, Maxime
+Numero d'identification : 933123315
+Nombre de services fournis : 2
+Total des frais de services : 69.46
+
+
+Nom du professionnel: Famelis, Michaelis
+Numero d'identification : 692976403
+Nombre de services fournis : 2
+Total des frais de services : 16.7
+
+
+Nom du professionnel: Schweizer, Thomas
+Numero d'identification : 773774589
+Nombre de services fournis : 4
+Total des frais de services : 194.68
+
+
+
+
+Nombre total de professionnels : 3
+Nombre total de seances de service : 8
+Total des Frais : 280.84

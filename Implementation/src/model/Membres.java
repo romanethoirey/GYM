@@ -19,7 +19,7 @@ public class Membres {
         listeMembres.add(Membre);
     }
 
-    public Membre getMembre(int numeroMembre){
+    public Membre getMembre(Long numeroMembre){
         return listeMembres
                 .stream()
                 .filter(membre -> membre.getNumeroClient().equals(numeroMembre))

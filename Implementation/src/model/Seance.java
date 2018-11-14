@@ -97,4 +97,20 @@ public class Seance {
     public boolean membreInscrit(Long numeroMembre){
         return this.listeInscriptionsSeance.stream().anyMatch(inscription->inscription.getNumeroMembre().equals(numeroMembre));
     }
+
+    @Override
+    public String toString() {
+        return "" +
+                "titre='" + titre + '\n' +
+                "  heureCreation=" + heureCreation +
+                ", dateDebut=" + dateDebut +
+                ", dateFin=" + dateFin +
+                ", heureSeance=" + heureSeance +
+                ", recurHebdo=" + recurHebdo + '\n' +
+                "  capacite=" + capacite + '\n' +
+                "  numeroProfessionnel=" + numeroProfessionnel + '\n' +
+                "  code de la seance=" + code +
+                ", frais='" + frais + '\n' +
+                "  Commentaire='" + Commentaire + '\n';
+    }
 }

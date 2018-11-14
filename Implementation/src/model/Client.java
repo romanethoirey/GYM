@@ -43,4 +43,15 @@ public abstract class Client {//TODO informations personnelles
 
     public void setStatus(GymService.Status status) {this.status =status; }
 
+    public Long getNumero() {
+        return numero;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
 }

@@ -1,14 +1,17 @@
 package service;
 
 import model.Seance;
-
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
 
 public class GymService {
 
-    public final static Integer NOMBRE_CAS_DUTILISATION=6; //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
+    public final static Integer NOMBRE_CAS_DUTILISATION=8; //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
+    public final static String TITRE_FICHIER_TEF = "GYM_fichier_TEF";
+    public final static String TITRE_RAPPORT_SYNTHESE = "GYM_Rapport_Synthese";
 
     public enum Status{Suspendu, Valide, Inexistant, Expire}//Status possible d'un membre
 
@@ -71,12 +74,14 @@ public class GymService {
 
     public void printMenuPrincipal() {
         System.out.println("" +// TODO mettre le texte dans une fichier separe ?
-                "1) Créer un nouveau compte au gym.\n" +
-                "2) Accéder au gym.\n" +
-                "3) Consulter les inscriptions aux séances de service (pour le Professionnel).\n" +
-                "4) Créer une séance de service.\n" +
-                "5) Consulter la liste des séances de service pour une possible inscription.\n" +
-                "6) Confirmer la présence du Membre à une séance de service.");
+                "1) Creer un nouveau compte au gym.\n" +
+                "2) Acceder au gym.\n" +
+                "3) Consulter les inscriptions aux seances de service (pour le Professionnel).\n" +
+                "4) Creer une seance de service.\n" +
+                "5) Consulter la liste des seances de service pour une possible inscription.\n" +
+                "6) Confirmer la presence du Membre a une seance de service.\n" +
+                "7) Creer le fichier TEF (SIMULATION, normalement seulement l'Horloge du systeme)\n" +
+                "8) Creer le rapport de synthèse (SIMULATION, normalement seulement l'Horloge du systeme et le Gerant du gym)");
     }
 
     public void printTypeClient() {
@@ -110,6 +115,10 @@ public class GymService {
         System.out.println("\nLe client veut-il s'inscrire ? (y/n)");
     }
 
+    public void printContinuerOuFin(){
+        System.out.println("\nVoulez vous retourner au menu principal (sinon, la session sera terminee) ? (y/n)");
+    }
+
     public void printMockData(){
         System.out.println("\nVoulez vous initialiser le logiciel en mode demo (creation de mock data) ? (y/n)");
     }
@@ -126,15 +135,15 @@ public class GymService {
 
     private void printInformationPersonnellesInput(String attribut){System.out.println("\nVeuiller entrer le " + attribut + " du client.");}
 
-    public void printNumeroNouceauClient(Long attribut){System.out.println("\nLe numero du nouveau client est :  " + attribut+ ".");}
+    public void printNumeroNouceauClient(Long attribut){System.out.println("\nLe numero d'identification du client est :  " + attribut+ ".");}
 
-    public void printInfosSeance(Seance seance){System.out.println("Titre : "+seance.getTitre()+" Prix : "+seance.getFrais() + "$ Code de seance : "+seance.getCode());}
+    public void printInfosSeance(Seance seance){System.out.println("\n"+seance.toString());}
 
     public void printSeanceInput(String attribut){System.out.println("\nVeuiller entrer le " + attribut + " de la seance.");}
 
     public void printFraisSeance(String attribut){System.out.println("\nLe prix de la Seance est de " + attribut + " $.");}
 
-    public void printStatusClient(Status status){System.out.println("\nLe client avec le numero entre est " + status.toString() );}
+    public void printStatusClient(Status status){System.out.println("\nLe client avec le numero d'identification entre est " + status.toString() );}
 
     public void printInfosInscriptionsSeance(Seance seance){
         System.out.println("Titre : "+seance.getTitre());
@@ -159,6 +168,21 @@ public class GymService {
         }
         return boolArray;
     }
+
+    public void creationFichierTexte(String titre, List<String> contenu){
+        try {
+            Path file = Paths.get(titre + ".txt");
+            Files.write(file, contenu, Charset.forName("UTF-8"));
+        }catch(java.io.IOException e){
+            printOperationAnnule();
+            System.out.println(e.getStackTrace());
+        }
+    }
+
+    public Double arrondirDoubleDeuxDecimals(Double valeur){
+       return Math.floor(valeur * 100) / 100;
+    }
+
 
 }
 

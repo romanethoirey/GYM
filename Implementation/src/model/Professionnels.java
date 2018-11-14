@@ -18,7 +18,7 @@ public class Professionnels {
         listeProfessionnels.add(professionnel);
     }
 
-    public Professionnel getProfessionnel(int numeroProfessionnel){
+    public Professionnel getProfessionnel(Long numeroProfessionnel){
         return listeProfessionnels
                 .stream()
                 .filter(professionnel -> professionnel.getNumeroClient().equals(numeroProfessionnel))
