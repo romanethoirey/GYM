@@ -9,7 +9,7 @@ import java.util.*;
 
 public class GymService {
 
-    public final static Integer NOMBRE_CAS_DUTILISATION=8; //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
+    public final static Integer NOMBRE_CAS_DUTILISATION=9;//+1, pour quitter le logiciel //TODO sortir constantes, les mettre dans un fichier de constantes de systeme
     public final static String TITRE_FICHIER_TEF = "GYM_fichier_TEF";
     public final static String TITRE_RAPPORT_SYNTHESE = "GYM_Rapport_Synthese";
 
