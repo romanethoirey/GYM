@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class InscriptionSeance {
-    private LocalDateTime heureCreation;// TODO utiliser now()?
+    private LocalDateTime heureCreation;
     private LocalDate dateSeance;
     private Long numeroProfessionnel;
     private Long numeroMembre;

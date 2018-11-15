@@ -142,7 +142,7 @@ public class GymController {
             GymService.Status status;
             ArrayList identification;
 
-            switch (gymService.menuUserInput(gymService.NOMBRE_CAS_DUTILISATION)) {
+            switch (gymService.menuUserInput(GymService.NOMBRE_CAS_DUTILISATION)) {
                 case 1:// Creation d'un client
                     nouveauCompte();
                     System.out.println("\n\n");
@@ -164,7 +164,7 @@ public class GymController {
                     }
                     System.out.println("\n\n");
                     break;
-                case 4://Creer une seance de service//TODO check pour juste professionnels
+                case 4://Creer une seance de service
                     identification  = identificationClient();
                     status  = (GymService.Status)identification.get(0);
                     gymService.printStatusClient(status);
@@ -371,7 +371,7 @@ public class GymController {
 
     private void creationFichierTEF(){
         List<String> contenu = new ArrayList<>();
-        contenu.add(gymService.TITRE_FICHIER_TEF + "\n\n");
+        contenu.add(GymService.TITRE_FICHIER_TEF + "\n\n");
 
         professionnels
                 .getListeProfessionnels()
@@ -390,7 +390,7 @@ public class GymController {
                     contenu.add("\n");
                 });
 
-        gymService.creationFichierTexte(gymService.TITRE_FICHIER_TEF, contenu);
+        gymService.creationFichierTexte(GymService.TITRE_FICHIER_TEF, contenu);
         gymService.printOperationComplete();
     }
 
@@ -399,7 +399,7 @@ public class GymController {
         Double totalDesFrais = 0.0;
         Integer totalDesSeances = 0;
 
-        contenu.add(gymService.TITRE_RAPPORT_SYNTHESE + "\n\n");
+        contenu.add(GymService.TITRE_RAPPORT_SYNTHESE + "\n\n");
 
         List<Professionnel> listeProfessionnels = professionnels.getListeProfessionnels();
         List<Seance> listeSeances = seances.getListeSeances();
@@ -431,7 +431,7 @@ public class GymController {
         contenu.add("Nombre total de seances de service : " + totalDesSeances);
         contenu.add("Total des Frais : " + gymService.arrondirDoubleDeuxDecimals(totalDesFrais));
 
-        gymService.creationFichierTexte(gymService.TITRE_RAPPORT_SYNTHESE,  contenu);
+        gymService.creationFichierTexte(GymService.TITRE_RAPPORT_SYNTHESE,  contenu);
         gymService.printOperationComplete();
     }
 }

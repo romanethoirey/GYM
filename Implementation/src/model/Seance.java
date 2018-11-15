@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class Seance {
     private String titre;
-    private LocalDateTime heureCreation;// TODO utiliser now()?
+    private LocalDateTime heureCreation;
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private LocalTime heureSeance;
@@ -28,7 +28,7 @@ public class Seance {
 
     public Seance(String titreSeance, String dateDebut, String dateFin, String heureSeance, ArrayList<Boolean> recurHebdo, String capacite, Long numeroProfessionnel, String frais, String commentaire, GymService gymService, Seances seances) throws MauvaisFormatSeanceException{
         this.titre = titreSeance;
-        this.heureCreation = LocalDateTime.now();//TODO ajouter hypothese pour date de creation = MAINTENANT
+        this.heureCreation = LocalDateTime.now();
         this.dateDebut = LocalDate.parse(dateDebut, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
         this.dateFin = LocalDate.parse(dateFin, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
         this.heureSeance = LocalTime.parse(heureSeance, DateTimeFormatter.ofPattern("HH:mm"));

@@ -2,33 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9182a80b-8821-4152-be4b-f751fe69c24a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Implementation.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/controller.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/exception.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/model.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/service.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src.plantuml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/controller/GymController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/controller/GymController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatClientException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatClientException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatInscriptionSeanceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatInscriptionSeanceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatMembreException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatMembreException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatPresenceSeanceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatPresenceSeanceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatProfessionnelException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatProfessionnelException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatSeanceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/exception/MauvaisFormatSeanceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/exception/TropParticipantsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/exception/TropParticipantsException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/model/Clients.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/model/Clients.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/model/InscriptionSeance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/model/InscriptionSeance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/model/Membres.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/model/Membres.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/model/PresenceSeance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/model/PresenceSeance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/model/Professionnels.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/model/Professionnels.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/model/Seance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/model/Seance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/model/Seances.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/model/Seances.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/model/client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/model/client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/service/GymService$status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/service/GymService$status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implementation/service/GymService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implementation/service/GymService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/GymController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Membres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Membres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Professionnels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Professionnels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/MauvaisFormatInscriptionSeanceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception/MauvaisFormatInscriptionSeanceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/MauvaisFormatMembreException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/MauvaisFormatPresenceSeanceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception/MauvaisFormatPresenceSeanceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/MauvaisFormatProfessionnelException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InscriptionSeance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/InscriptionSeance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PresenceSeance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PresenceSeance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Seance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Seance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/GymService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/GymService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,104 +44,73 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="102" />
+          <entry key="classpath" value="1" />
+          <entry key="java" value="116" />
+          <entry key="plantuml" value="10" />
+          <entry key="png" value="1" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="102" />
+          <entry key="Eclipse" value="1" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="116" />
           <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PlantUML file" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.29" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/GymController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="431" column="97" selection-start-line="431" selection-start-column="97" selection-end-line="431" selection-end-column="97" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#menuPrincipal#0;class#GymController#0" />
-                <element signature="method#nouveauCompte#0;class#GymController#0" />
-                <element signature="method#nouvelleSeance#0;class#GymController#0" />
-                <element signature="method#inscriptionSeance#0;class#GymController#0" />
-                <element signature="method#confirmationPresenceSeance#0;class#GymController#0" />
-                <element signature="method#identificationClient#0;class#GymController#0" />
-                <element signature="method#informationsPersonnelles#0;class#GymController#0" />
-                <element signature="method#consultationListeSeances#0;class#GymController#0" />
-                <element signature="method#consultationInscriptionsSeances#0;class#GymController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GYM_Rapport_Synthese.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GYM_fichier_TEF.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/service/GymService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="173" selection-start-line="173" selection-end-line="173" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#intUserInput#0;class#GymService#0" />
-                <element signature="method#stringUserInput#0;class#GymService#0" />
-                <element signature="method#menuUserInput#0;class#GymService#0" />
-                <element signature="method#printTypeClient#0;class#GymService#0" />
-                <element signature="method#printMockData#0;class#GymService#0" />
-                <element signature="method#printInfosInscriptionsSeance#0;class#GymService#0" />
-                <element signature="method#boolStringToArray#0;class#GymService#0" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Implementation.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Seance.java">
+        <entry file="file://$PROJECT_DIR$/src/src.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/service/service.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/model.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/exception/exception.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/controller.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/PresenceSeance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="85">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,25 +174,25 @@
         <option value="$PROJECT_DIR$/src/exception/MauvaisFormatClientException.java" />
         <option value="$PROJECT_DIR$/src/exception/MauvaisFormatSeanceException.java" />
         <option value="$PROJECT_DIR$/src/exception/TropParticipantsException.java" />
-        <option value="$PROJECT_DIR$/src/exception/MauvaisFormatPresenceSeanceException.java" />
-        <option value="$PROJECT_DIR$/src/exception/MauvaisFormatInscriptionSeanceException.java" />
         <option value="$PROJECT_DIR$/src/model/Professionnels.java" />
         <option value="$PROJECT_DIR$/src/model/Membres.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/model/Professionnel.java" />
         <option value="$PROJECT_DIR$/src/model/Membre.java" />
         <option value="$PROJECT_DIR$/src/model/Seances.java" />
-        <option value="$PROJECT_DIR$/src/model/PresenceSeance.java" />
         <option value="$PROJECT_DIR$/src/model/Clients.java" />
+        <option value="$PROJECT_DIR$/src/model/Client.java" />
+        <option value="$PROJECT_DIR$/src/service/GymService.java" />
+        <option value="$PROJECT_DIR$/src/controller/GymController.java" />
         <option value="$PROJECT_DIR$/src/model/InscriptionSeance.java" />
         <option value="$PROJECT_DIR$/src/model/Seance.java" />
-        <option value="$PROJECT_DIR$/src/model/Client.java" />
-        <option value="$PROJECT_DIR$/src/controller/GymController.java" />
-        <option value="$PROJECT_DIR$/src/service/GymService.java" />
+        <option value="$PROJECT_DIR$/src/model/PresenceSeance.java" />
+        <option value="$PROJECT_DIR$/src/exception/MauvaisFormatInscriptionSeanceException.java" />
+        <option value="$PROJECT_DIR$/src/exception/MauvaisFormatPresenceSeanceException.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="707" />
     <option name="width" value="1220" />
     <option name="height" value="1047" />
@@ -247,7 +204,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,10 +245,13 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542178646497" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542210599548" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -341,10 +300,20 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="707" y="0" width="1220" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2603939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1641791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -353,15 +322,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.9474261" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.7677985" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.9381779" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.7677985" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.56073755" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -371,6 +341,7 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="PlantUML" order="9" visible="true" weight="0.8358209" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12686567" />
@@ -442,94 +413,10 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/model/seances.kt" />
-    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding>
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#145#146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/TropParticipantsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="38" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#162#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatSeanceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#151#152#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatProfessionnelException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
-          <folding>
-            <element signature="e#201#202#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatPresenceSeanceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-          <folding>
-            <element signature="e#183#184#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatInscriptionSeanceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
-          <folding>
-            <element signature="e#189#190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatClientException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatMembreException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Professionnels.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,19 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/PresenceSeance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="18" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,19 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/InscriptionSeance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -577,9 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,9 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="69" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,9 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,40 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#153#154#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="31" />
-          <folding>
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Seance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -665,13 +483,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/GymService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/GymController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="431" column="97" selection-start-line="431" selection-start-column="97" selection-end-line="431" selection-end-column="97" />
+        <state relative-caret-position="179">
+          <caret line="166" column="52" selection-start-line="166" selection-start-column="52" selection-end-line="166" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#menuPrincipal#0;class#GymController#0" />
             <element signature="method#nouveauCompte#0;class#GymController#0" />
             <element signature="method#nouvelleSeance#0;class#GymController#0" />
             <element signature="method#inscriptionSeance#0;class#GymController#0" />
@@ -684,22 +508,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/GymService.java">
+    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatClientException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        <state relative-caret-position="85">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatMembreException.java" />
+    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatProfessionnelException.java" />
+    <entry file="file://$PROJECT_DIR$/src/exception/TropParticipantsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Implementation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#intUserInput#0;class#GymService#0" />
-            <element signature="method#stringUserInput#0;class#GymService#0" />
-            <element signature="method#menuUserInput#0;class#GymService#0" />
-            <element signature="method#printTypeClient#0;class#GymService#0" />
-            <element signature="method#printMockData#0;class#GymService#0" />
-            <element signature="method#printInfosInscriptionsSeance#0;class#GymService#0" />
-            <element signature="method#boolStringToArray#0;class#GymService#0" />
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1453#1454#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/InscriptionSeance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Seance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/PresenceSeance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/service.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/controller.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/exception.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/model.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatInscriptionSeanceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="83" selection-start-line="2" selection-start-column="83" selection-end-line="2" selection-end-column="83" />
+          <folding>
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatPresenceSeanceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="80" selection-start-line="2" selection-start-column="80" selection-end-line="2" selection-end-column="80" />
+          <folding>
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exception/MauvaisFormatSeanceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Implementation.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

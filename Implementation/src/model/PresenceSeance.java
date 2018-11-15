@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class PresenceSeance {
-    private LocalDateTime heureCreation;// TODO utiliser now()?
+    private LocalDateTime heureCreation;
     private Long numeroProfessionnel;
     private Long numeroMembre;
     private Long codeService;
