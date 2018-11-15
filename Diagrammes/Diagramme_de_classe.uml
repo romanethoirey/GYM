@@ -227,16 +227,11 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_0DkbwOiIEeitiq9ua6wCYg" name="void"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_arn-QOiXEeitiq9ua6wCYg" name="Exception">
-    <packagedElement xmi:type="uml:Class" xmi:id="_w2suwOiWEeitiq9ua6wCYg" name="Exception"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_HCkJcOiWEeitiq9ua6wCYg" name="MauvaisFormatInscriptionSeanceException">
       <generalization xmi:type="uml:Generalization" xmi:id="__pbGwOiXEeitiq9ua6wCYg" general="_MsmUEOiWEeitiq9ua6wCYg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_MsmUEOiWEeitiq9ua6wCYg" name="MauvaisFormatException">
-      <generalization xmi:type="uml:Generalization" xmi:id="_X7PE0OiYEeitiq9ua6wCYg" general="_w2suwOiWEeitiq9ua6wCYg"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_6acyYOiVEeitiq9ua6wCYg" name="TropParticipantsException">
-      <generalization xmi:type="uml:Generalization" xmi:id="_Ws0w8OiYEeitiq9ua6wCYg" general="_w2suwOiWEeitiq9ua6wCYg"/>
-    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MsmUEOiWEeitiq9ua6wCYg" name="MauvaisFormatException"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6acyYOiVEeitiq9ua6wCYg" name="TropParticipantsException"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_KjmAMOiWEeitiq9ua6wCYg" name="MauvaisFormatPresenceSeanceException">
       <generalization xmi:type="uml:Generalization" xmi:id="_RPZe8OiYEeitiq9ua6wCYg" general="_MsmUEOiWEeitiq9ua6wCYg"/>
     </packagedElement>
@@ -334,6 +329,14 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_K1gRwOilEeitiq9ua6wCYg" name="membres" type="_i6VxUOiFEeitiq9ua6wCYg"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_NlS40OilEeitiq9ua6wCYg" name="professionnels" type="_nBHZcOiFEeitiq9ua6wCYg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sR_lIejxEeitiq9ua6wCYg" name="membres" type="_i6VxUOiFEeitiq9ua6wCYg" aggregation="shared" association="_sR9I4OjxEeitiq9ua6wCYg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sSCBYOjxEeitiq9ua6wCYg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sSCocOjxEeitiq9ua6wCYg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_u20SUOjxEeitiq9ua6wCYg" name="professionnels" type="_nBHZcOiFEeitiq9ua6wCYg" aggregation="shared" association="_u2uywOjxEeitiq9ua6wCYg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u22HgOjxEeitiq9ua6wCYg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u22ukOjxEeitiq9ua6wCYg" value="1"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_vF7W4OilEeitiq9ua6wCYg" name="getListeClients">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_vF7W4eilEeitiq9ua6wCYg" name="List&lt;Client>" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
@@ -412,7 +415,9 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_dS3ygOiFEeitiq9ua6wCYg" name="Professionnel"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_dS3ygOiFEeitiq9ua6wCYg" name="Professionnel">
+      <generalization xmi:type="uml:Generalization" xmi:id="_OiSbAOjxEeitiq9ua6wCYg" general="_bqJhMOiFEeitiq9ua6wCYg"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_pbbfwOiFEeitiq9ua6wCYg" name="Seance">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_KXuYUOifEeitiq9ua6wCYg" name="titre">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -497,11 +502,25 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_zexb4OikEeitiq9ua6wCYg" name="Membre"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zexb4OikEeitiq9ua6wCYg" name="Membre">
+      <generalization xmi:type="uml:Generalization" xmi:id="_QcRbcOjxEeitiq9ua6wCYg" general="_bqJhMOiFEeitiq9ua6wCYg"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_eLoyQOigEeitiq9ua6wCYg" name="LocalDateTime"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_mVtQsOigEeitiq9ua6wCYg" name="LocalDate"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_ok2o0OigEeitiq9ua6wCYg" name="LocalTime"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sR9I4OjxEeitiq9ua6wCYg" memberEnd="_sR_lIejxEeitiq9ua6wCYg _sSCocejxEeitiq9ua6wCYg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sR--EOjxEeitiq9ua6wCYg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sR_lIOjxEeitiq9ua6wCYg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_sSCocejxEeitiq9ua6wCYg" name="clients" type="_keBKkOiFEeitiq9ua6wCYg" association="_sR9I4OjxEeitiq9ua6wCYg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_u2uywOjxEeitiq9ua6wCYg" memberEnd="_u20SUOjxEeitiq9ua6wCYg _u22ukejxEeitiq9ua6wCYg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_u2ydIOjxEeitiq9ua6wCYg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_u2zEMOjxEeitiq9ua6wCYg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_u22ukejxEeitiq9ua6wCYg" name="clients" type="_keBKkOiFEeitiq9ua6wCYg" association="_u2uywOjxEeitiq9ua6wCYg"/>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_n7C-AOh4Eeitiq9ua6wCYg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n7K50Oh4Eeitiq9ua6wCYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>

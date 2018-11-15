@@ -203,6 +203,9 @@ public class GymController {
                     creationRapportSynthese();
                     System.out.println("\n\n");
                     break;
+                case 9://Quitter le logiciel
+                    System.exit(0);
+                    break;
                 default:
                     gymService.printEntreeErronee();
                     break;

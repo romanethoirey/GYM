@@ -81,7 +81,8 @@ public class GymService {
                 "5) Consulter la liste des seances de service pour une possible inscription.\n" +
                 "6) Confirmer la presence du Membre a une seance de service.\n" +
                 "7) Creer le fichier TEF (SIMULATION, normalement seulement l'Horloge du systeme)\n" +
-                "8) Creer le rapport de synthèse (SIMULATION, normalement seulement l'Horloge du systeme et le Gerant du gym)");
+                "8) Creer le rapport de synthèse (SIMULATION, normalement seulement l'Horloge du systeme et le Gerant du gym)\n"+
+                "9) Quitter le logiciel");
     }
 
     public void printTypeClient() {
