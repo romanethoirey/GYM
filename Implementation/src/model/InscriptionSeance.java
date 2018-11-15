@@ -1,7 +1,6 @@
 package model;
 
 import exception.MauvaisFormatInscriptionSeanceException;
-import exception.MauvaisFormatPresenceSeanceException;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -12,7 +11,7 @@ public class InscriptionSeance {
     private LocalDate dateSeance;
     private Long numeroProfessionnel;
     private Long numeroMembre;
-    private Long codeService;
+    private Long codeSeance;
     private String commentaire;
 
     public InscriptionSeance(String dateSeance, Long numeroProfessionnel, Long numeroMembre, Long codeService, String commentaire) throws MauvaisFormatInscriptionSeanceException {
@@ -27,34 +26,13 @@ public class InscriptionSeance {
         this.heureCreation = LocalDateTime.now();
         this.numeroMembre = numeroMembre;
         this.numeroProfessionnel = numeroProfessionnel;
-        this.codeService = codeService;
+        this.codeSeance = codeService;
         this.commentaire = commentaire;
-    }
-
-    public Long getNumeroProfessionnel() {
-        return numeroProfessionnel;
     }
 
     public Long getNumeroMembre() {
         return numeroMembre;
     }
-
-    public String getCommentaire() {
-        return commentaire;
-    }
-
-    public LocalDateTime getHeureCreation() {
-        return heureCreation;
-    }
-
-    public LocalDate getDateSeance() {
-        return dateSeance;
-    }
-
-    public Long getCodeService() {
-        return codeService;
-    }
-
 
     @Override
     public String toString() {

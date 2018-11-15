@@ -15,8 +15,8 @@ public class Seances {
         return listeSeances;
     }
 
-    public void addListeSeances(Seance Seance) {
-        listeSeances.add(Seance);
+    public void addListeSeances(Seance seance) {
+        listeSeances.add(seance);
     }
 
     public Seance getSceance(long numeroSeance){

@@ -141,7 +141,7 @@ public class GymService {
 
     public void printSeanceInput(String attribut){System.out.println("\nVeuiller entrer le " + attribut + " de la seance.");}
 
-    public void printFraisSeance(String attribut){System.out.println("\nLe prix de la Seance est de " + attribut + " $.");}
+    public void printFraisSeance(Double attribut){System.out.println("\nLe prix de la Seance est de " + attribut + " $.");}
 
     public void printStatusClient(Status status){System.out.println("\nLe client avec le numero d'identification entre est " + status.toString() );}
 

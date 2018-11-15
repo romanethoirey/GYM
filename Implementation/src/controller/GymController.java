@@ -39,7 +39,7 @@ public class GymController {
                         "12:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,true,false,false,true,false)),
                         "25",
-                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[0]).getNumeroProfessionnel(),
+                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[0]).getNumeroClient(),
                         "51.35",
                         "",
                         gymService,
@@ -51,7 +51,7 @@ public class GymController {
                         "08:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,false,true,false,false,true)),
                         "5",
-                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[0]).getNumeroProfessionnel(),
+                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[0]).getNumeroClient(),
                         "18.11",
                         "",
                         gymService,
@@ -63,7 +63,7 @@ public class GymController {
                         "12:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,true,false,false,true,false)),
                         "25",
-                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[1]).getNumeroProfessionnel(),
+                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[1]).getNumeroClient(),
                         "11.35",
                         "",
                         gymService,
@@ -75,7 +75,7 @@ public class GymController {
                         "08:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,false,true,false,false,true)),
                         "5",
-                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroProfessionnel(),
+                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroClient(),
                         "65.11",
                         "",
                         gymService,
@@ -87,7 +87,7 @@ public class GymController {
                         "12:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,true,false,false,true,false)),
                         "25",
-                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroProfessionnel(),
+                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroClient(),
                         "45.35",
                         "",
                         gymService,
@@ -99,7 +99,7 @@ public class GymController {
                         "08:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,false,true,false,false,true)),
                         "5",
-                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroProfessionnel(),
+                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroClient(),
                         "76.11",
                         "",
                         gymService,
@@ -111,7 +111,7 @@ public class GymController {
                         "12:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,true,false,false,true,false)),
                         "25",
-                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[1]).getNumeroProfessionnel(),
+                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[1]).getNumeroClient(),
                         "5.35",
                         "",
                         gymService,
@@ -123,7 +123,7 @@ public class GymController {
                         "08:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,false,true,false,false,true)),
                         "5",
-                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroProfessionnel(),
+                        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroClient(),
                         "8.11",
                         "",
                         gymService,
@@ -414,7 +414,7 @@ public class GymController {
             for (int j = 0; j < listeSeances.size(); j++) {
                 if(listeSeances.get(j).getNumeroProfessionnel().equals(listeProfessionnels.get(i).getNumeroClient())){
                     totalDesSeancesProfessionnel++;
-                    totalDesFraisProfessionnel += Double.parseDouble(listeSeances.get(j).getFrais());
+                    totalDesFraisProfessionnel += listeSeances.get(j).getFrais();
                 }
             }
 

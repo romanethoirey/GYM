@@ -20,9 +20,8 @@ public class Seance {
     private Long capacite;
     private Long numeroProfessionnel;
     private Long code;
-    private String frais;//TODO couper le signe de $ a la fin du String
-    private String Commentaire;
-    private ArrayList<Membre> listeParticipants;
+    private Double frais;//TODO couper le signe de $ a la fin du String
+    private String commentaire;
     private ArrayList<InscriptionSeance> listeInscriptionsSeance;
     private ArrayList<PresenceSeance> listePresencesSeance;
 
@@ -49,9 +48,8 @@ public class Seance {
         this.recurHebdo = recurHebdo;
         this.capacite = Long.parseLong(capacite);
         this.numeroProfessionnel = numeroProfessionnel;
-        this.frais = frais;
-        this.Commentaire = commentaire;
-        this.listeParticipants = new ArrayList<Membre>();
+        this.frais = Double.parseDouble(frais);
+        this.commentaire = commentaire;
         this.listeInscriptionsSeance = new ArrayList<InscriptionSeance>();
         this.listePresencesSeance = new ArrayList<PresenceSeance>();
     }
@@ -61,20 +59,15 @@ public class Seance {
     }
 
     public String getTitre() {
-        return titre;
+        return this.titre;
     }
 
-    public String getFrais() {
-        return frais;
+    public Double getFrais() {
+        return this.frais;
     }
 
     public Long getNumeroProfessionnel() {
         return numeroProfessionnel;
-    }
-
-    public void addMembreParticipant(Membre membre) throws TropParticipantsException{
-        if(this.listeParticipants.size()<this.capacite){this.listeParticipants.add(membre);}
-        else{throw new TropParticipantsException("La limite de participant est deja atteinte.");}
     }
 
     public void addInscription(InscriptionSeance inscriptionSeance) throws TropParticipantsException{
@@ -111,6 +104,6 @@ public class Seance {
                 "  numeroProfessionnel=" + numeroProfessionnel + '\n' +
                 "  code de la seance=" + code +
                 ", frais='" + frais + '\n' +
-                "  Commentaire='" + Commentaire + '\n';
+                "  Commentaire='" + commentaire + '\n';
     }
 }

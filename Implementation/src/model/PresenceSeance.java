@@ -2,13 +2,12 @@ package model;
 
 import exception.MauvaisFormatPresenceSeanceException;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class PresenceSeance {
     private LocalDateTime heureCreation;
     private Long numeroProfessionnel;
     private Long numeroMembre;
-    private Long codeService;
+    private Long codeSeance;
     private String commentaire;
 
     public PresenceSeance(Long numeroProfessionnel, Long numeroMembre, Long codeService, String commentaire) throws MauvaisFormatPresenceSeanceException{
@@ -21,7 +20,7 @@ public class PresenceSeance {
         this.heureCreation = LocalDateTime.now();
         this.numeroMembre = numeroMembre;
         this.numeroProfessionnel = numeroProfessionnel;
-        this.codeService = codeService;
+        this.codeSeance = codeService;
         this.commentaire = commentaire;
     }
 }
