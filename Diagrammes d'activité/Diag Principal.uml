@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_wIH0EOjvEeiXDO2j_qX3Gw" name="Diag Principal">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_wYX2kOjvEeiXDO2j_qX3Gw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_fmGWwOjwEeiXDO2j_qX3Gw" name="Activity2" node="_vUZboOjwEeiXDO2j_qX3Gw _6qTj8OjwEeiXDO2j_qX3Gw _97fycOjxEeiXDO2j_qX3Gw _dyw-oOj1EeiXDO2j_qX3Gw _lvGjEOj1EeiXDO2j_qX3Gw _qXV5gOj1EeiXDO2j_qX3Gw _s9XgkOj1EeiXDO2j_qX3Gw _zvPdAOj1EeiXDO2j_qX3Gw _5EWggOj1EeiXDO2j_qX3Gw __ZfdoOj1EeiXDO2j_qX3Gw _C2Uw4Oj2EeiXDO2j_qX3Gw _I-dz0Oj2EeiXDO2j_qX3Gw _U92hgOj3EeiXDO2j_qX3Gw _IeRQAOkmEei5J8u-Eci0TA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_V_9JoOj1EeiXDO2j_qX3Gw" target="_dyw-oOj1EeiXDO2j_qX3Gw" source="_vUZboOjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ipeO4Oj1EeiXDO2j_qX3Gw" target="_6qTj8OjwEeiXDO2j_qX3Gw" source="_dyw-oOj1EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jqSWMOj2EeiXDO2j_qX3Gw" target="_lvGjEOj1EeiXDO2j_qX3Gw" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_oM0GMOj2EeiXDO2j_qX3Gw" name="sortir du menu" target="_IeRQAOkmEei5J8u-Eci0TA" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6HTV0Oj2EeiXDO2j_qX3Gw" target="_qXV5gOj1EeiXDO2j_qX3Gw" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_7NwnkOj2EeiXDO2j_qX3Gw" target="_s9XgkOj1EeiXDO2j_qX3Gw" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BdA_IOj3EeiXDO2j_qX3Gw" target="_zvPdAOj1EeiXDO2j_qX3Gw" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Ci5pIOj3EeiXDO2j_qX3Gw" target="_5EWggOj1EeiXDO2j_qX3Gw" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_DXwNgOj3EeiXDO2j_qX3Gw" target="__ZfdoOj1EeiXDO2j_qX3Gw" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ENkbMOj3EeiXDO2j_qX3Gw" target="_C2Uw4Oj2EeiXDO2j_qX3Gw" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FTe6YOj3EeiXDO2j_qX3Gw" target="_I-dz0Oj2EeiXDO2j_qX3Gw" source="_6qTj8OjwEeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Xd-U4Oj3EeiXDO2j_qX3Gw" target="_IeRQAOkmEei5J8u-Eci0TA" source="_U92hgOj3EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_sNWG8Oj3EeiXDO2j_qX3Gw" target="_U92hgOj3EeiXDO2j_qX3Gw" source="_lvGjEOj1EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_tUyQIOj3EeiXDO2j_qX3Gw" target="_U92hgOj3EeiXDO2j_qX3Gw" source="_qXV5gOj1EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_vN01YOj3EeiXDO2j_qX3Gw" target="_U92hgOj3EeiXDO2j_qX3Gw" source="_s9XgkOj1EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_wIBz0Oj3EeiXDO2j_qX3Gw" target="_U92hgOj3EeiXDO2j_qX3Gw" source="_zvPdAOj1EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_w3h-IOj3EeiXDO2j_qX3Gw" target="_U92hgOj3EeiXDO2j_qX3Gw" source="_5EWggOj1EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xvruIOj3EeiXDO2j_qX3Gw" target="_U92hgOj3EeiXDO2j_qX3Gw" source="__ZfdoOj1EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_y7pK8Oj3EeiXDO2j_qX3Gw" target="_U92hgOj3EeiXDO2j_qX3Gw" source="_C2Uw4Oj2EeiXDO2j_qX3Gw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zuwC4Oj3EeiXDO2j_qX3Gw" target="_U92hgOj3EeiXDO2j_qX3Gw" source="_I-dz0Oj2EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_vUZboOjwEeiXDO2j_qX3Gw" name="Noeud Initial" outgoing="_V_9JoOj1EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_6qTj8OjwEeiXDO2j_qX3Gw" name="Choisir une   des options" incoming="_ipeO4Oj1EeiXDO2j_qX3Gw" outgoing="_jqSWMOj2EeiXDO2j_qX3Gw _oM0GMOj2EeiXDO2j_qX3Gw _6HTV0Oj2EeiXDO2j_qX3Gw _7NwnkOj2EeiXDO2j_qX3Gw _BdA_IOj3EeiXDO2j_qX3Gw _Ci5pIOj3EeiXDO2j_qX3Gw _DXwNgOj3EeiXDO2j_qX3Gw _ENkbMOj3EeiXDO2j_qX3Gw _FTe6YOj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_97fycOjxEeiXDO2j_qX3Gw" name="CallBehaviorAction12"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_dyw-oOj1EeiXDO2j_qX3Gw" name="Afficher le menu" incoming="_V_9JoOj1EeiXDO2j_qX3Gw" outgoing="_ipeO4Oj1EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_lvGjEOj1EeiXDO2j_qX3Gw" name="Créer un nouveau compte au gym" incoming="_jqSWMOj2EeiXDO2j_qX3Gw" outgoing="_sNWG8Oj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_qXV5gOj1EeiXDO2j_qX3Gw" name="Accéder au gym" incoming="_6HTV0Oj2EeiXDO2j_qX3Gw" outgoing="_tUyQIOj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_s9XgkOj1EeiXDO2j_qX3Gw" name="Consulter les inscriptions aux séances de service" incoming="_7NwnkOj2EeiXDO2j_qX3Gw" outgoing="_vN01YOj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_zvPdAOj1EeiXDO2j_qX3Gw" name="Créer une séance de service" incoming="_BdA_IOj3EeiXDO2j_qX3Gw" outgoing="_wIBz0Oj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_5EWggOj1EeiXDO2j_qX3Gw" name="Consulter la liste des seances de service pour une possible inscription" incoming="_Ci5pIOj3EeiXDO2j_qX3Gw" outgoing="_w3h-IOj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="__ZfdoOj1EeiXDO2j_qX3Gw" name="Confirmer la presence du Membre a une seance de service" incoming="_DXwNgOj3EeiXDO2j_qX3Gw" outgoing="_xvruIOj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_C2Uw4Oj2EeiXDO2j_qX3Gw" name="Créer le fichier TEF" incoming="_ENkbMOj3EeiXDO2j_qX3Gw" outgoing="_y7pK8Oj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_I-dz0Oj2EeiXDO2j_qX3Gw" name="Créer le rapport de synthèse" incoming="_FTe6YOj3EeiXDO2j_qX3Gw" outgoing="_zuwC4Oj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_U92hgOj3EeiXDO2j_qX3Gw" name="Noeud de fusion" incoming="_sNWG8Oj3EeiXDO2j_qX3Gw _tUyQIOj3EeiXDO2j_qX3Gw _vN01YOj3EeiXDO2j_qX3Gw _wIBz0Oj3EeiXDO2j_qX3Gw _w3h-IOj3EeiXDO2j_qX3Gw _xvruIOj3EeiXDO2j_qX3Gw _y7pK8Oj3EeiXDO2j_qX3Gw _zuwC4Oj3EeiXDO2j_qX3Gw" outgoing="_Xd-U4Oj3EeiXDO2j_qX3Gw"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_IeRQAOkmEei5J8u-Eci0TA" name="Fermer le programme" incoming="_oM0GMOj2EeiXDO2j_qX3Gw _Xd-U4Oj3EeiXDO2j_qX3Gw"/>
+  </packagedElement>
+</uml:Model>

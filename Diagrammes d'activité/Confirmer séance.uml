@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_R83fIOkrEei5J8u-Eci0TA" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_SClsoOkrEei5J8u-Eci0TA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_TEE-0OkrEei5J8u-Eci0TA" name="Activity2" node="_bqk6kOkrEei5J8u-Eci0TA _dN9_8OkrEei5J8u-Eci0TA _pRmw8OkrEei5J8u-Eci0TA _sD88wOkrEei5J8u-Eci0TA _t2WHcOkrEei5J8u-Eci0TA _6mNsUOkrEei5J8u-Eci0TA _Any0QOksEei5J8u-Eci0TA _RFwbgOksEei5J8u-Eci0TA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fxwyYOkrEei5J8u-Eci0TA" target="_dN9_8OkrEei5J8u-Eci0TA" source="_bqk6kOkrEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xDs0QOkrEei5J8u-Eci0TA" target="_pRmw8OkrEei5J8u-Eci0TA" source="_dN9_8OkrEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xsVhkOkrEei5J8u-Eci0TA" target="_sD88wOkrEei5J8u-Eci0TA" source="_pRmw8OkrEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yUyosOkrEei5J8u-Eci0TA" name="else" target="_t2WHcOkrEei5J8u-Eci0TA" source="_sD88wOkrEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__EiRwOkrEei5J8u-Eci0TA" name="valide" target="_6mNsUOkrEei5J8u-Eci0TA" source="_sD88wOkrEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BuwcUOksEei5J8u-Eci0TA" target="_Any0QOksEei5J8u-Eci0TA" source="_6mNsUOkrEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_CYIJcOksEei5J8u-Eci0TA" name="else" target="_t2WHcOkrEei5J8u-Eci0TA" source="_Any0QOksEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_T5o4YOksEei5J8u-Eci0TA" name="Présence confirmer" target="_RFwbgOksEei5J8u-Eci0TA" source="_Any0QOksEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_bqk6kOkrEei5J8u-Eci0TA" name="Noeud Initial" outgoing="_fxwyYOkrEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_dN9_8OkrEei5J8u-Eci0TA" name="Confirmer séance" incoming="_fxwyYOkrEei5J8u-Eci0TA" outgoing="_xDs0QOkrEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_pRmw8OkrEei5J8u-Eci0TA" name="Vérifier numéro client" incoming="_xDs0QOkrEei5J8u-Eci0TA" outgoing="_xsVhkOkrEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_sD88wOkrEei5J8u-Eci0TA" name="" incoming="_xsVhkOkrEei5J8u-Eci0TA" outgoing="_yUyosOkrEei5J8u-Eci0TA __EiRwOkrEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_t2WHcOkrEei5J8u-Eci0TA" name="Retourner au menu principal ou fermer programme" incoming="_yUyosOkrEei5J8u-Eci0TA _CYIJcOksEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_6mNsUOkrEei5J8u-Eci0TA" name="Vérifier code séance" incoming="__EiRwOkrEei5J8u-Eci0TA" outgoing="_BuwcUOksEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_Any0QOksEei5J8u-Eci0TA" incoming="_BuwcUOksEei5J8u-Eci0TA" outgoing="_CYIJcOksEei5J8u-Eci0TA _T5o4YOksEei5J8u-Eci0TA">
+      <name xsi:nil="true"/>
+    </node>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_RFwbgOksEei5J8u-Eci0TA" name="Retourner au menu principal ou fermer programme" incoming="_T5o4YOksEei5J8u-Eci0TA"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_g9FgkOksEei5J8u-Eci0TA" type="PapyrusUMLActivityDiagram" name="Procédure Comptable" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_g9FgkeksEei5J8u-Eci0TA" type="Activity_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_g9FgkuksEei5J8u-Eci0TA" type="Activity_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_g9Fgk-ksEei5J8u-Eci0TA" type="Activity_KeywordLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_g9FglOksEei5J8u-Eci0TA" type="Activity_ParameterCompartment">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_g9FgleksEei5J8u-Eci0TA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_g9FgluksEei5J8u-Eci0TA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g9Fgl-ksEei5J8u-Eci0TA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_g9FgmOksEei5J8u-Eci0TA" type="Activity_PreconditionCompartment">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_g9FgmeksEei5J8u-Eci0TA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_g9FgmuksEei5J8u-Eci0TA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g9Fgm-ksEei5J8u-Eci0TA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_g9FgnOksEei5J8u-Eci0TA" type="Activity_PostconditionCompartment">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_g9FgneksEei5J8u-Eci0TA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_g9FgnuksEei5J8u-Eci0TA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g9Fgn-ksEei5J8u-Eci0TA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_g9FgoOksEei5J8u-Eci0TA" type="Activity_ActivityNodeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_XLspkektEei5J8u-Eci0TA" type="InitialNode_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_XLspk-ktEei5J8u-Eci0TA" type="InitialNode_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_XLsplOktEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_XLsplektEei5J8u-Eci0TA" type="InitialNode_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_XLspluktEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:InitialNode" href="Procédure%20comptable.uml#_XLspkOktEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XLspkuktEei5J8u-Eci0TA" x="335" y="28"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_YSyNcOktEei5J8u-Eci0TA" type="OpaqueAction_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_YS0psOktEei5J8u-Eci0TA" type="OpaqueAction_NameLabel"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_YS0psektEei5J8u-Eci0TA" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_YS0psuktEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:OpaqueAction" href="Procédure%20comptable.uml#_YSvxMOktEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YS0ps-ktEei5J8u-Eci0TA" x="295" y="68" height="21"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_3QTOgOktEei5J8u-Eci0TA" type="OpaqueAction_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_3QTOguktEei5J8u-Eci0TA" type="OpaqueAction_NameLabel"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_3QTOg-ktEei5J8u-Eci0TA" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3QTOhOktEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:OpaqueAction" href="Procédure%20comptable.uml#_3QNH4OktEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3QTOhektEei5J8u-Eci0TA" x="55" y="128" height="21"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_FZ9Q0OkuEei5J8u-Eci0TA" type="DecisionNode_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_FZ9Q0ukuEei5J8u-Eci0TA" type="DecisionNode_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_FZ9Q0-kuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_FZ9Q1OkuEei5J8u-Eci0TA" type="DecisionNode_DecisionInputLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_FZ9Q1ekuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_FZ9Q1ukuEei5J8u-Eci0TA" type="DecisionNode_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_FZ9Q1-kuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:DecisionNode" href="Procédure%20comptable.uml#_FZ2jIOkuEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FZ9Q0ekuEei5J8u-Eci0TA" x="355" y="128"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_JjnN0OkuEei5J8u-Eci0TA" type="OpaqueAction_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_JjnN0ukuEei5J8u-Eci0TA" type="OpaqueAction_NameLabel"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_JjnN0-kuEei5J8u-Eci0TA" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_JjnN1OkuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:OpaqueAction" href="Procédure%20comptable.uml#_Jji8YOkuEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JjnN1ekuEei5J8u-Eci0TA" x="415" y="128" height="21"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_QxwPgOkuEei5J8u-Eci0TA" type="OpaqueAction_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_QxwPgukuEei5J8u-Eci0TA" type="OpaqueAction_NameLabel"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_QxwPg-kuEei5J8u-Eci0TA" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_QxwPhOkuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:OpaqueAction" href="Procédure%20comptable.uml#_QxtzQOkuEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QxwPhekuEei5J8u-Eci0TA" x="35" y="168" height="21"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_XBS68OkuEei5J8u-Eci0TA" type="OpaqueAction_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_XBS68ukuEei5J8u-Eci0TA" type="OpaqueAction_NameLabel"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_XBS68-kuEei5J8u-Eci0TA" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_XBS69OkuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:OpaqueAction" href="Procédure%20comptable.uml#_XBIi4OkuEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XBS69ekuEei5J8u-Eci0TA" x="375" y="168" height="21"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_dQ8UEOkuEei5J8u-Eci0TA" type="FlowFinalNode_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_dQ8UEukuEei5J8u-Eci0TA" type="FlowFinalNode_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_dQ8UE-kuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_dQ8UFOkuEei5J8u-Eci0TA" type="FlowFinalNode_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_dQ8UFekuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:FlowFinalNode" href="Procédure%20comptable.uml#_dQ4psOkuEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dQ8UEekuEei5J8u-Eci0TA" x="435" y="208"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_fX1IEOkuEei5J8u-Eci0TA" type="ActivityFinalNode_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_fX1IEukuEei5J8u-Eci0TA" type="ActivityFinalNode_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fX1IE-kuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_fX1IFOkuEei5J8u-Eci0TA" type="ActivityFinalNode_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fX1IFekuEei5J8u-Eci0TA" y="15"/>
+        </children>
+        <element xmi:type="uml:ActivityFinalNode" href="Procédure%20comptable.uml#_fXo60OkuEei5J8u-Eci0TA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fX1IEekuEei5J8u-Eci0TA" x="155" y="208"/>
+      </children>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g9FgoeksEei5J8u-Eci0TA"/>
+    </children>
+    <element xmi:type="uml:Activity" href="Procédure%20comptable.uml#_gX_2gOksEei5J8u-Eci0TA"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g9FgouksEei5J8u-Eci0TA"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_g9Fgo-ksEei5J8u-Eci0TA" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_g9FgpOksEei5J8u-Eci0TA"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_g9FgpeksEei5J8u-Eci0TA" diagramKindId="org.eclipse.papyrus.uml.diagram.activity">
+    <owner xmi:type="uml:Model" href="Procédure%20comptable.uml#_fMQcIOksEei5J8u-Eci0TA"/>
+  </styles>
+  <element xmi:type="uml:Activity" href="Procédure%20comptable.uml#_gX_2gOksEei5J8u-Eci0TA"/>
+  <edges xmi:type="notation:Connector" xmi:id="_axcBMOktEei5J8u-Eci0TA" type="ControlFlow_Edge" source="_XLspkektEei5J8u-Eci0TA" target="_YSyNcOktEei5J8u-Eci0TA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_axcBM-ktEei5J8u-Eci0TA" type="ControlFlow_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_axcBNOktEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_axcBNektEei5J8u-Eci0TA" type="ControlFlow_WeightLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_axcBNuktEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_axcBN-ktEei5J8u-Eci0TA" type="ControlFlow_GuardLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_axcBOOktEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_axcBOektEei5J8u-Eci0TA" type="ControlFlow_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_axcBOuktEei5J8u-Eci0TA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_axcBMektEei5J8u-Eci0TA"/>
+    <element xmi:type="uml:ControlFlow" href="Procédure%20comptable.uml#_axSQMOktEei5J8u-Eci0TA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_axcBMuktEei5J8u-Eci0TA" points="[356, 75, -643984, -643984]$[358, 100, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a1fawOktEei5J8u-Eci0TA" id="(0.8175675675675678,0.7648648648648638)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a1fawektEei5J8u-Eci0TA" id="(0.4603174603174603,0.19047619047619047)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_5P2EYOktEei5J8u-Eci0TA" type="ControlFlow_Edge" source="_YSyNcOktEei5J8u-Eci0TA" target="_FZ9Q0OkuEei5J8u-Eci0TA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_5P2EY-ktEei5J8u-Eci0TA" type="ControlFlow_NameLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="__X9SIOktEei5J8u-Eci0TA" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_5P2EZOktEei5J8u-Eci0TA" x="-9" y="19"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_5P2EZektEei5J8u-Eci0TA" type="ControlFlow_WeightLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="__YDYwOktEei5J8u-Eci0TA" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_5P2EZuktEei5J8u-Eci0TA" x="-1" y="17"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_5P2EZ-ktEei5J8u-Eci0TA" type="ControlFlow_GuardLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="__YJfYOktEei5J8u-Eci0TA" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_5P2EaOktEei5J8u-Eci0TA" x="9" y="17"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_5P2EaektEei5J8u-Eci0TA" type="ControlFlow_StereotypeLabel">
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="__YPmAOktEei5J8u-Eci0TA" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_5P2EauktEei5J8u-Eci0TA" y="-19"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_5P2EYektEei5J8u-Eci0TA"/>
+    <element xmi:type="uml:ControlFlow" href="Procédure%20comptable.uml#_5PthgOktEei5J8u-Eci0TA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5P2EYuktEei5J8u-Eci0TA" points="[-1, 2, 1, -39]$[-2, 41, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5QF8AOktEei5J8u-Eci0TA" id="(0.48412698412698413,0.9047619047619048)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5QF8AektEei5J8u-Eci0TA" id="(0.5,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_IHIowOkuEei5J8u-Eci0TA" type="ControlFlow_Edge" source="_FZ9Q0OkuEei5J8u-Eci0TA" target="_3QTOgOktEei5J8u-Eci0TA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_IHIow-kuEei5J8u-Eci0TA" type="ControlFlow_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_IHIoxOkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_IHIoxekuEei5J8u-Eci0TA" type="ControlFlow_WeightLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_IHIoxukuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_IHIox-kuEei5J8u-Eci0TA" type="ControlFlow_GuardLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_IHIoyOkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_IHIoyekuEei5J8u-Eci0TA" type="ControlFlow_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_IHIoyukuEei5J8u-Eci0TA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_IHIowekuEei5J8u-Eci0TA"/>
+    <element xmi:type="uml:ControlFlow" href="Procédure%20comptable.uml#_IGwOQOkuEei5J8u-Eci0TA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IHIowukuEei5J8u-Eci0TA" points="[360, 175, -643984, -643984]$[288, 180, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IHlUsOkuEei5J8u-Eci0TA" id="(0.0,0.5)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IHlUsekuEei5J8u-Eci0TA" id="(0.978448275862069,0.6666666666666666)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_Moxn8OkuEei5J8u-Eci0TA" type="ControlFlow_Edge" source="_FZ9Q0OkuEei5J8u-Eci0TA" target="_JjnN0OkuEei5J8u-Eci0TA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Moxn8-kuEei5J8u-Eci0TA" type="ControlFlow_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Moxn9OkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Moxn9ekuEei5J8u-Eci0TA" type="ControlFlow_WeightLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Moxn9ukuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Moxn9-kuEei5J8u-Eci0TA" type="ControlFlow_GuardLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Mo0EMOkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Mo0EMekuEei5J8u-Eci0TA" type="ControlFlow_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Mo0EMukuEei5J8u-Eci0TA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Moxn8ekuEei5J8u-Eci0TA"/>
+    <element xmi:type="uml:ControlFlow" href="Procédure%20comptable.uml#_MoiXYOkuEei5J8u-Eci0TA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Moxn8ukuEei5J8u-Eci0TA" points="[380, 175, -643984, -643984]$[420, 170, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MpTMYOkuEei5J8u-Eci0TA" id="(1.0,0.5)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MpTMYekuEei5J8u-Eci0TA" id="(0.023255813953488372,0.47619047619047616)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_bsRcUOkuEei5J8u-Eci0TA" type="ControlFlow_Edge" source="_JjnN0OkuEei5J8u-Eci0TA" target="_XBS68OkuEei5J8u-Eci0TA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_bsRcU-kuEei5J8u-Eci0TA" type="ControlFlow_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_bsRcVOkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_bsRcVekuEei5J8u-Eci0TA" type="ControlFlow_WeightLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_bsRcVukuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_bsRcV-kuEei5J8u-Eci0TA" type="ControlFlow_GuardLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_bsRcWOkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_bsRcWekuEei5J8u-Eci0TA" type="ControlFlow_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_bsRcWukuEei5J8u-Eci0TA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_bsRcUekuEei5J8u-Eci0TA"/>
+    <element xmi:type="uml:ControlFlow" href="Procédure%20comptable.uml#_br5B0OkuEei5J8u-Eci0TA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bsRcUukuEei5J8u-Eci0TA" points="[-4, 2, 2, -23]$[-6, 21, 0, -4]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bsthMOkuEei5J8u-Eci0TA" id="(0.48372093023255813,0.9047619047619048)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bsthMekuEei5J8u-Eci0TA" id="(0.42857142857142855,0.19047619047619047)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_gQkt8OkuEei5J8u-Eci0TA" type="ControlFlow_Edge" source="_QxwPgOkuEei5J8u-Eci0TA" target="_fX1IEOkuEei5J8u-Eci0TA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_gQkt8-kuEei5J8u-Eci0TA" type="ControlFlow_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gQkt9OkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_gQkt9ekuEei5J8u-Eci0TA" type="ControlFlow_WeightLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gQkt9ukuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_gQkt9-kuEei5J8u-Eci0TA" type="ControlFlow_GuardLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gQkt-OkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_gQkt-ekuEei5J8u-Eci0TA" type="ControlFlow_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gQkt-ukuEei5J8u-Eci0TA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_gQkt8ekuEei5J8u-Eci0TA"/>
+    <element xmi:type="uml:ControlFlow" href="Procédure%20comptable.uml#_gQP90OkuEei5J8u-Eci0TA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gQkt8ukuEei5J8u-Eci0TA" points="[6, 10, 4, 6]$[6, 35, 4, 31]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gRG5cOkuEei5J8u-Eci0TA" id="(0.3720693170234454,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gRG5cekuEei5J8u-Eci0TA" id="(0.08333333333333286,0.31666666666666854)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_g790UOkuEei5J8u-Eci0TA" type="ControlFlow_Edge" source="_XBS68OkuEei5J8u-Eci0TA" target="_dQ8UEOkuEei5J8u-Eci0TA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_g790U-kuEei5J8u-Eci0TA" type="ControlFlow_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_g790VOkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_g790VekuEei5J8u-Eci0TA" type="ControlFlow_WeightLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_g790VukuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_g790V-kuEei5J8u-Eci0TA" type="ControlFlow_GuardLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_g790WOkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_g790WekuEei5J8u-Eci0TA" type="ControlFlow_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_g790WukuEei5J8u-Eci0TA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_g790UekuEei5J8u-Eci0TA"/>
+    <element xmi:type="uml:ControlFlow" href="Procédure%20comptable.uml#_g71RcOkuEei5J8u-Eci0TA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g790UukuEei5J8u-Eci0TA" points="[13, 2, 0, 7]$[14, 31, 1, 36]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g8icEOkuEei5J8u-Eci0TA" id="(0.20186335403726707,0.9047619047619048)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_g8icEekuEei5J8u-Eci0TA" id="(0.25,0.3)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_kMyE0OkuEei5J8u-Eci0TA" type="ControlFlow_Edge" source="_3QTOgOktEei5J8u-Eci0TA" target="_QxwPgOkuEei5J8u-Eci0TA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_kMyE0-kuEei5J8u-Eci0TA" type="ControlFlow_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_kMyE1OkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_kMyE1ekuEei5J8u-Eci0TA" type="ControlFlow_WeightLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_kMyE1ukuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_kMyE1-kuEei5J8u-Eci0TA" type="ControlFlow_GuardLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_kMyE2OkuEei5J8u-Eci0TA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_kMyE2ekuEei5J8u-Eci0TA" type="ControlFlow_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_kMyE2ukuEei5J8u-Eci0TA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_kMyE0ekuEei5J8u-Eci0TA"/>
+    <element xmi:type="uml:ControlFlow" href="Procédure%20comptable.uml#_kMcGkOkuEei5J8u-Eci0TA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kMyE0ukuEei5J8u-Eci0TA" points="[-2, 5, -2, -21]$[0, 24, 0, -2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kNWskOkuEei5J8u-Eci0TA" id="(0.4396551724137931,0.7619047619047619)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kNWskekuEei5J8u-Eci0TA" id="(0.3730886850152905,0.09523809523809523)"/>
+  </edges>
+</notation:Diagram>

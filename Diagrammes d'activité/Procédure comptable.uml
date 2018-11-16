@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fMQcIOksEei5J8u-Eci0TA" name="Procédure comptable">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_fRNNkOksEei5J8u-Eci0TA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_gX_2gOksEei5J8u-Eci0TA" name="Activity2" node="_XLspkOktEei5J8u-Eci0TA _YSvxMOktEei5J8u-Eci0TA _3QNH4OktEei5J8u-Eci0TA _FZ2jIOkuEei5J8u-Eci0TA _Jji8YOkuEei5J8u-Eci0TA _QxtzQOkuEei5J8u-Eci0TA _XBIi4OkuEei5J8u-Eci0TA _dQ4psOkuEei5J8u-Eci0TA _fXo60OkuEei5J8u-Eci0TA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_axSQMOktEei5J8u-Eci0TA" target="_YSvxMOktEei5J8u-Eci0TA" source="_XLspkOktEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5PthgOktEei5J8u-Eci0TA" target="_FZ2jIOkuEei5J8u-Eci0TA" source="_YSvxMOktEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_IGwOQOkuEei5J8u-Eci0TA" target="_3QNH4OktEei5J8u-Eci0TA" source="_FZ2jIOkuEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_MoiXYOkuEei5J8u-Eci0TA" target="_Jji8YOkuEei5J8u-Eci0TA" source="_FZ2jIOkuEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_br5B0OkuEei5J8u-Eci0TA" target="_XBIi4OkuEei5J8u-Eci0TA" source="_Jji8YOkuEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gQP90OkuEei5J8u-Eci0TA" target="_fXo60OkuEei5J8u-Eci0TA" source="_QxtzQOkuEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_g71RcOkuEei5J8u-Eci0TA" target="_dQ4psOkuEei5J8u-Eci0TA" source="_XBIi4OkuEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_kMcGkOkuEei5J8u-Eci0TA" target="_QxtzQOkuEei5J8u-Eci0TA" source="_3QNH4OktEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_XLspkOktEei5J8u-Eci0TA" name="Noeud Initial" outgoing="_axSQMOktEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_YSvxMOktEei5J8u-Eci0TA" name="Procédure comptable" incoming="_axSQMOktEei5J8u-Eci0TA" outgoing="_5PthgOktEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_3QNH4OktEei5J8u-Eci0TA" name="Création du fichier TEF vendredi à minuit" incoming="_IGwOQOkuEei5J8u-Eci0TA" outgoing="_kMcGkOkuEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_FZ2jIOkuEei5J8u-Eci0TA" name="" incoming="_5PthgOktEei5J8u-Eci0TA" outgoing="_IGwOQOkuEei5J8u-Eci0TA _MoiXYOkuEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Jji8YOkuEei5J8u-Eci0TA" name="Demande de création fichier synthèse" incoming="_MoiXYOkuEei5J8u-Eci0TA" outgoing="_br5B0OkuEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_QxtzQOkuEei5J8u-Eci0TA" name="Enregistrement du fichier, accessible par service comptable" incoming="_kMcGkOkuEei5J8u-Eci0TA" outgoing="_gQP90OkuEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_XBIi4OkuEei5J8u-Eci0TA" name="Système créé et enregistre synthèse, accessible par gérant" incoming="_br5B0OkuEei5J8u-Eci0TA" outgoing="_g71RcOkuEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_dQ4psOkuEei5J8u-Eci0TA" name="Retourner au menu principal ou fermer programme" incoming="_g71RcOkuEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_fXo60OkuEei5J8u-Eci0TA" name="fermer le programme" incoming="_gQP90OkuEei5J8u-Eci0TA"/>
+  </packagedElement>
+</uml:Model>

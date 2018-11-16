@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_vUXE8OkoEei5J8u-Eci0TA" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_vaJj4OkoEei5J8u-Eci0TA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_zgEQYOkoEei5J8u-Eci0TA" name="Activity2" node="_ATxMYOkpEei5J8u-Eci0TA _Bv_50OkpEei5J8u-Eci0TA _TJtXoOkpEei5J8u-Eci0TA _XdKJ0OkpEei5J8u-Eci0TA _cKRZMOkpEei5J8u-Eci0TA _jlQkEOkpEei5J8u-Eci0TA _p4AUgOkpEei5J8u-Eci0TA _vszksOkpEei5J8u-Eci0TA _F_fjoOkqEei5J8u-Eci0TA _Ww4dMOkqEei5J8u-Eci0TA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4CjusOkpEei5J8u-Eci0TA" target="_Bv_50OkpEei5J8u-Eci0TA" source="_ATxMYOkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4ywckOkpEei5J8u-Eci0TA" target="_TJtXoOkpEei5J8u-Eci0TA" source="_Bv_50OkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5idbMOkpEei5J8u-Eci0TA" target="_XdKJ0OkpEei5J8u-Eci0TA" source="_TJtXoOkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6kSEkOkpEei5J8u-Eci0TA" name="else" target="_cKRZMOkpEei5J8u-Eci0TA" source="_XdKJ0OkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_8v3yYOkpEei5J8u-Eci0TA" name="else" target="_cKRZMOkpEei5J8u-Eci0TA" source="_p4AUgOkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_-lugwOkpEei5J8u-Eci0TA" name="oui" target="_jlQkEOkpEei5J8u-Eci0TA" source="_XdKJ0OkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__H-5QOkpEei5J8u-Eci0TA" target="_p4AUgOkpEei5J8u-Eci0TA" source="_jlQkEOkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__pMv8OkpEei5J8u-Eci0TA" name="valide" target="_vszksOkpEei5J8u-Eci0TA" source="_p4AUgOkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_MGfXEOkqEei5J8u-Eci0TA" target="_F_fjoOkqEei5J8u-Eci0TA" source="_vszksOkpEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_NB7roOkqEei5J8u-Eci0TA" name="else" target="_cKRZMOkpEei5J8u-Eci0TA" source="_F_fjoOkqEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ZmkQ4OkqEei5J8u-Eci0TA" name="Inscription à la séance réussi" target="_Ww4dMOkqEei5J8u-Eci0TA" source="_F_fjoOkqEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_ATxMYOkpEei5J8u-Eci0TA" name="Noeud Initial" outgoing="_4CjusOkpEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Bv_50OkpEei5J8u-Eci0TA" name="Inscription à une séance" incoming="_4CjusOkpEei5J8u-Eci0TA" outgoing="_4ywckOkpEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_TJtXoOkpEei5J8u-Eci0TA" name="Afficher les différentes séances disponibles" incoming="_4ywckOkpEei5J8u-Eci0TA" outgoing="_5idbMOkpEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_XdKJ0OkpEei5J8u-Eci0TA" name="Client veut-il s'inscrire?" incoming="_5idbMOkpEei5J8u-Eci0TA" outgoing="_6kSEkOkpEei5J8u-Eci0TA _-lugwOkpEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_cKRZMOkpEei5J8u-Eci0TA" name="Retourner au menu principal ou fermer programme" incoming="_6kSEkOkpEei5J8u-Eci0TA _8v3yYOkpEei5J8u-Eci0TA _NB7roOkqEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jlQkEOkpEei5J8u-Eci0TA" name="Vérifier numéro client" incoming="_-lugwOkpEei5J8u-Eci0TA" outgoing="__H-5QOkpEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_p4AUgOkpEei5J8u-Eci0TA" name="" incoming="__H-5QOkpEei5J8u-Eci0TA" outgoing="_8v3yYOkpEei5J8u-Eci0TA __pMv8OkpEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_vszksOkpEei5J8u-Eci0TA" name="Vérifier code séance" incoming="__pMv8OkpEei5J8u-Eci0TA" outgoing="_MGfXEOkqEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_F_fjoOkqEei5J8u-Eci0TA" incoming="_MGfXEOkqEei5J8u-Eci0TA" outgoing="_NB7roOkqEei5J8u-Eci0TA _ZmkQ4OkqEei5J8u-Eci0TA">
+      <name xsi:nil="true"/>
+    </node>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_Ww4dMOkqEei5J8u-Eci0TA" name="Retourner au menu principal ou fermer programme" incoming="_ZmkQ4OkqEei5J8u-Eci0TA"/>
+  </packagedElement>
+</uml:Model>

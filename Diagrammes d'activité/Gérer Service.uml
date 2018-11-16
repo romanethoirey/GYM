@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_8UzZQOkkEei5J8u-Eci0TA" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_8em1gOkkEei5J8u-Eci0TA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_AM33AOklEei5J8u-Eci0TA" name="Activity2" node="_FFum4OkmEei5J8u-Eci0TA _VEUxkOkmEei5J8u-Eci0TA _ZVC_4OkmEei5J8u-Eci0TA _DsOycOkoEei5J8u-Eci0TA _PsYKkOkoEei5J8u-Eci0TA _aHO_4OkoEei5J8u-Eci0TA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GOIugOkoEei5J8u-Eci0TA" target="_VEUxkOkmEei5J8u-Eci0TA" source="_FFum4OkmEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_HLknIOkoEei5J8u-Eci0TA" target="_ZVC_4OkmEei5J8u-Eci0TA" source="_VEUxkOkmEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_H1vlgOkoEei5J8u-Eci0TA" target="_DsOycOkoEei5J8u-Eci0TA" source="_ZVC_4OkmEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_TdxYkOkoEei5J8u-Eci0TA" name="valide, le service est créé" target="_PsYKkOkoEei5J8u-Eci0TA" source="_DsOycOkoEei5J8u-Eci0TA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_c5JG0OkoEei5J8u-Eci0TA" name="else" target="_aHO_4OkoEei5J8u-Eci0TA" source="_DsOycOkoEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_FFum4OkmEei5J8u-Eci0TA" name="Noeud Initial" outgoing="_GOIugOkoEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_VEUxkOkmEei5J8u-Eci0TA" name="Créer un Service" incoming="_GOIugOkoEei5J8u-Eci0TA" outgoing="_HLknIOkoEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ZVC_4OkmEei5J8u-Eci0TA" name="Vérifier numéro professionnel" incoming="_HLknIOkoEei5J8u-Eci0TA" outgoing="_H1vlgOkoEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_DsOycOkoEei5J8u-Eci0TA" name="" incoming="_H1vlgOkoEei5J8u-Eci0TA" outgoing="_TdxYkOkoEei5J8u-Eci0TA _c5JG0OkoEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_PsYKkOkoEei5J8u-Eci0TA" name="Retourner au menu principal ou fermer programme" incoming="_TdxYkOkoEei5J8u-Eci0TA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_aHO_4OkoEei5J8u-Eci0TA" name="Retourner au menu principal ou fermer programme" incoming="_c5JG0OkoEei5J8u-Eci0TA"/>
+  </packagedElement>
+</uml:Model>
