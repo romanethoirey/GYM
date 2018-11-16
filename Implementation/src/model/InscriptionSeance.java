@@ -41,7 +41,7 @@ public class InscriptionSeance {
                 ", dateSeance=" + dateSeance +
                 ", numeroProfessionnel=" + numeroProfessionnel +
                 ", numeroMembre=" + numeroMembre +
-                ", codeService=" + codeService +
+                ", codeService=" + codeSeance +
                 ", commentaire='" + commentaire + '\'' +
                 '}';
     }
