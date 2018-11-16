@@ -1,0 +1,26 @@
+GYM_fichier_TEF
+
+
+Nom du professionnel: Daigle, Maxime
+Numero d'identification : 933123315
+Responsables des services suivants : 
+  Titre de la seance : Yoga  |  Code de la seance : 1241571  |  Nombre de participants : 0
+  Titre de la seance : Karate  |  Code de la seance : 3018797  |  Nombre de participants : 0
+
+
+Nom du professionnel: Famelis, Michaelis
+Numero d'identification : 692976403
+Responsables des services suivants : 
+  Titre de la seance : Meditation  |  Code de la seance : 5132603  |  Nombre de participants : 0
+  Titre de la seance : Football  |  Code de la seance : 9092272  |  Nombre de participants : 0
+
+
+Nom du professionnel: Schweizer, Thomas
+Numero d'identification : 773774589
+Responsables des services suivants : 
+  Titre de la seance : Flechettes  |  Code de la seance : 8628275  |  Nombre de participants : 0
+  Titre de la seance : Jogging  |  Code de la seance : 5502854  |  Nombre de participants : 0
+  Titre de la seance : Step Dance  |  Code de la seance : 6708080  |  Nombre de participants : 0
+  Titre de la seance : Soccer  |  Code de la seance : 4469149  |  Nombre de participants : 0
+
+
