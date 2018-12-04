@@ -13,9 +13,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,8 +32,13 @@ public class SeancesTest {
 	@Test
 	public void testGetSceance() {
 		assertEquals(seances.getSceance(s.getCode()),s);
-		assertNotNull(seances.getSceance(0));
 		
+		
+	}
+	
+	@Test 
+	public void testGetSeanceNull() {
+		assertNull(seances.getSceance(0));
 	}
 
 }
