@@ -30,15 +30,17 @@ public class SeancesTest {
 	}
 
 	@Test
-	public void testGetSceance() {
+	public void testGetSeance() {
 		assertEquals(seances.getSceance(s.getCode()),s);
-		
-		
 	}
 	
-	@Test 
+	@Test
 	public void testGetSeanceNull() {
 		assertNull(seances.getSceance(0));
 	}
-
+	
+	@Test
+	public void testGetSeanceTrue() {
+		assertTrue(seances.getSceance(s.getCode()).getFrais()==51.35);
+	}
 }
