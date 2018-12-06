@@ -33,7 +33,7 @@ public class GymController {
             //Deux seances
             try {
                 seances.addListeSeances(new Seance(
-                        "Yoga",
+                        "Yoga", "101",
                         "01-01-2018",
                         "31-12-2018",
                         "12:30",
@@ -45,7 +45,7 @@ public class GymController {
                         gymService,
                         seances));
                 seances.addListeSeances(new Seance(
-                        "Karate",
+                        "Karate", "789",
                         "01-03-2018",
                         "31-07-2018",
                         "08:30",
@@ -57,7 +57,7 @@ public class GymController {
                         gymService,
                         seances));
                 seances.addListeSeances(new Seance(
-                        "Meditation",
+                        "Meditation","456",
                         "01-01-2018",
                         "31-12-2018",
                         "12:30",
@@ -69,7 +69,7 @@ public class GymController {
                         gymService,
                         seances));
                 seances.addListeSeances(new Seance(
-                        "Flechettes",
+                        "Flechettes","395",
                         "01-03-2018",
                         "31-07-2018",
                         "08:30",
@@ -81,7 +81,7 @@ public class GymController {
                         gymService,
                         seances));
                 seances.addListeSeances(new Seance(
-                        "Jogging",
+                        "Jogging", "734",
                         "01-01-2018",
                         "31-12-2018",
                         "12:30",
@@ -93,7 +93,7 @@ public class GymController {
                         gymService,
                         seances));
                 seances.addListeSeances(new Seance(
-                        "Step Dance",
+                        "Step Dance", "295",
                         "01-03-2018",
                         "31-07-2018",
                         "08:30",
@@ -105,7 +105,7 @@ public class GymController {
                         gymService,
                         seances));
                 seances.addListeSeances(new Seance(
-                        "Football",
+                        "Football","649",
                         "01-01-2018",
                         "31-12-2018",
                         "12:30",
@@ -117,7 +117,7 @@ public class GymController {
                         gymService,
                         seances));
                 seances.addListeSeances(new Seance(
-                        "Soccer",
+                        "Soccer","190",
                         "01-03-2018",
                         "31-07-2018",
                         "08:30",
@@ -262,6 +262,7 @@ public class GymController {
         try{
             seances.addListeSeances( new Seance(
                     gymService.informationSeanceInput("titre"),
+                    gymService.informationSeanceInput("code de la séance de 3 chiffres"),
                     gymService.informationSeanceInput("date de debut (JJ-MM-AAAA)"),
                     gymService.informationSeanceInput("date de fin (JJ-MM-AAAA)"),
                     gymService.informationSeanceInput("heure (HH:mm)"),
@@ -292,7 +293,7 @@ public class GymController {
                         gymService.informationSeanceInput("date du rendez-vous (jj-mm-aaaa)"),
                         seances.getSceance(Long.parseLong(code)).getNumeroProfessionnel(),
                         numeroClient,
-                        Long.parseLong(code),
+                        Integer.parseInt(code),
                         gymService.informationSeanceInput("commentaire")
                 ));
 

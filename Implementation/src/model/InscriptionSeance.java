@@ -11,10 +11,10 @@ public class InscriptionSeance {
     private LocalDate dateSeance;
     private Long numeroProfessionnel;
     private Long numeroMembre;
-    private Long codeSeance;
+    private int codeSeance;
     private String commentaire;
 
-    public InscriptionSeance(String dateSeance, Long numeroProfessionnel, Long numeroMembre, Long codeService, String commentaire) throws MauvaisFormatInscriptionSeanceException {
+    public InscriptionSeance(String dateSeance, Long numeroProfessionnel, Long numeroMembre, int codeService, String commentaire) throws MauvaisFormatInscriptionSeanceException {
 
         if((numeroMembre+"").length() != 9 ||//si longueur invalide
                 (numeroProfessionnel+"").length() != 9 ||//si longueur invalide
@@ -32,6 +32,10 @@ public class InscriptionSeance {
 
     public Long getNumeroMembre() {
         return numeroMembre;
+    }
+    
+    public int getCodeService() {
+    	return codeSeance;
     }
 
     @Override

@@ -25,7 +25,7 @@ public class Seance {
     private ArrayList<InscriptionSeance> listeInscriptionsSeance;
     private ArrayList<PresenceSeance> listePresencesSeance;
 
-    public Seance(String titreSeance, String dateDebut, String dateFin, String heureSeance, ArrayList<Boolean> recurHebdo, String capacite, Long numeroProfessionnel, String frais, String commentaire, GymService gymService, Seances seances) throws MauvaisFormatSeanceException{
+    public Seance(String titreSeance, String code,String dateDebut, String dateFin, String heureSeance, ArrayList<Boolean> recurHebdo, String capacite, Long numeroProfessionnel, String frais, String commentaire, GymService gymService, Seances seances) throws MauvaisFormatSeanceException{
         this.titre = titreSeance;
         this.heureCreation = LocalDateTime.now();
         this.dateDebut = LocalDate.parse(dateDebut, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
@@ -39,7 +39,7 @@ public class Seance {
         ){throw new MauvaisFormatSeanceException("Mauvais format.");}//TODO message plus descriptif
 
         while(true){
-            this.code = gymService.randomLongLengthN(7);
+            this.code = Long.parseLong(code);
             if(seances
                     .getListeSeances()
                     .stream()
@@ -90,20 +90,47 @@ public class Seance {
     public boolean membreInscrit(Long numeroMembre){
         return this.listeInscriptionsSeance.stream().anyMatch(inscription->inscription.getNumeroMembre().equals(numeroMembre));
     }
+    
+    public String affichageJour(ArrayList<Boolean> recurHebdo) {
+    	String list = "";
+    	for(int i=0;i<recurHebdo.size();i++) {
+    		if(recurHebdo.get(0)==true && list.contains("Dimanche")==false) {
+    			list+="Dimanche, ";
+    		}
+    		if(recurHebdo.get(1)==true && list.contains("Lundi")==false) {
+    			list+="Lundi, ";
+    		}
+    		if(recurHebdo.get(2)==true && list.contains("Mardi")==false) {
+    			list+="Mardi, ";
+    		}
+    		if(recurHebdo.get(3)==true && list.contains("Mercredi")==false) {
+    			list+="Mercredi, ";
+    		}
+    		if(recurHebdo.get(4)==true && list.contains("Jeudi")==false) {
+    			list+="Jeudi, ";
+    		}
+    		if(recurHebdo.get(5)==true && list.contains("Vendredi")==false) {
+    			list+="Vendredi, ";
+    		}
+    		if(recurHebdo.get(6)==true && list.contains("Samedi")==false) {
+    			list+="Samedi ";
+    		}
+    	}
+    	return list;
+    }
 
     @Override
     public String toString() {
         return "" +
-                "titre='" + titre + '\n' +
-                "  heureCreation=" + heureCreation +
-                ", dateDebut=" + dateDebut +
-                ", dateFin=" + dateFin +
-                ", heureSeance=" + heureSeance +
-                ", recurHebdo=" + recurHebdo + '\n' +
-                "  capacite=" + capacite + '\n' +
-                "  numeroProfessionnel=" + numeroProfessionnel + '\n' +
-                "  code de la seance=" + code +
-                ", frais='" + frais + '\n' +
-                "  Commentaire='" + commentaire + '\n';
+               titre +" "+code+ '\n'+
+                "  heureCreation: " + heureCreation +
+                ", dateDebut: " + dateDebut +
+                ", dateFin: " + dateFin +
+                ", heureSeance: " + heureSeance + ",\n" +
+                "  Récurrence: " + affichageJour(recurHebdo) + '\n' +
+                "  capacite: " + capacite + '\n' +
+                "  numeroProfessionnel: " + numeroProfessionnel + '\n' +
+                "  frais: " + frais + "$\n" +
+                "  Commentaire: " + commentaire + '\n';
     }
 }
