@@ -61,6 +61,7 @@ public class GymService {
            
             
             try {
+            	if(attribut.equals("code de la séance de 3 chiffres")&& !(VerifCode(input))) {System.out.println("verifier le code");}else
 				if(attribut.equals("date de fin (JJ-MM-AAAA)")&& !((formatter.parse(DateDebut).compareTo(formatter.parse(input)))<0)) {System.out.println("verifier la date");}else
 				{if( !input.isEmpty() || attribut.equals("commentaire")){
 					return input;//dans le range des cas d'utilisation
@@ -68,8 +69,18 @@ public class GymService {
       }
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				printEntreeErronee();
 			}}
+    }
+    public boolean VerifCode(String s){
+    	try {
+			Integer.parseInt(s);
+		} catch (NumberFormatException e){
+			return false;
+		}
+ 
+		return (s.length()==3);
+    	
     }
     
     public Integer menuUserInput(Integer max){

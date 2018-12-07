@@ -60,7 +60,7 @@ public class TestClient {
 		@Test
 		public void testPro()  {
 			
-            Professionnel pro = new Professionnel("Maxime", "Daigle", "maxime.daigle@umontreal.ca",GymService.Status.Expire,gymService, clients);
+            Professionnel pro = new Professionnel("Maxime", "Daigle", "maxime.daigle@umontreal.ca",GymService.Status.Valide,gymService, clients);
            
 			
 			Assert.assertTrue(pro.getStatus().equals(GymService.Status.Valide));// alors que ca doit pas etre valide
