@@ -24,8 +24,8 @@ public class SeancesTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		s = new Seance ("Yoga","01-01-2018","31-12-2018","12:30",new ArrayList<Boolean>(Arrays.asList(true,false,true,false,false,true,false)),
-                "25",(long) 111111111,"51.35","",gymService,seances); 
+		s = new Seance ("Yoga","111111111","01-01-2018","31-12-2018","12:30",new ArrayList<Boolean>(Arrays.asList(true,false,true,false,false,true,false)),
+                "25",(long)111111111,"51.35","",gymService,seances); 
 		seances.addListeSeances(s);
 	}
 
