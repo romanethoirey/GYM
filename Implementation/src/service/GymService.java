@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class GymService {
 
@@ -39,8 +40,11 @@ public class GymService {
         while(true){//boucle jusqu'a entree valide
             printInformationPersonnellesInput(attribut);
             String input = stringUserInput();
-            if( !input.isEmpty() || attribut.equals("commentaire")){return input;}//dans le range des cas d'utilisation
-            printEntreeErronee();
+            if(attribut.equals("email")&& !isValid(input) ) {printEntreeErronee();}else
+            {if( !input.isEmpty() || attribut.equals("commentaire")){
+            	return input;//dans le range des cas d'utilisation
+                }else printEntreeErronee();
+            }
         }
     }
 
@@ -183,7 +187,18 @@ public class GymService {
     public Double arrondirDoubleDeuxDecimals(Double valeur){
        return Math.floor(valeur * 100) / 100;
     }
-
+    public static boolean isValid(String email) 
+    { 
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+ 
+                            "[a-zA-Z0-9_+&*-]+)*@" + 
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
+                            "A-Z]{2,7}$"; 
+                              
+        Pattern pat = Pattern.compile(emailRegex); 
+        if (email == null) 
+            return false; 
+        return pat.matcher(email).matches(); 
+    } 
 
 }
 

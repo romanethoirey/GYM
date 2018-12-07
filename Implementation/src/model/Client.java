@@ -56,4 +56,5 @@ public abstract class Client {//TODO informations personnelles
     public String getNom() {
         return nom;
     }
+    
 }
