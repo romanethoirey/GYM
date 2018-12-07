@@ -118,7 +118,12 @@ public class Seance {
     	}
     	return list;
     }
-
+    public LocalDate getDateDebut() {
+    	return this.dateDebut;
+    }
+    public LocalDate getDatefin() {
+    	return this.dateFin;
+    }
     @Override
     public String toString() {
         return "" +

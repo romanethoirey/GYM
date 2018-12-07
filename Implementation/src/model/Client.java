@@ -1,5 +1,7 @@
 package model;
 
+import java.time.LocalDate;
+
 import service.GymService;
 
 public abstract class Client {//TODO informations personnelles
@@ -46,6 +48,10 @@ public abstract class Client {//TODO informations personnelles
     public String getPrenom() {
         return prenom;
     }
+    public String getMail() {
+    	return this.email;
+    }
+   
 
     public String getNom() {
         return nom;
