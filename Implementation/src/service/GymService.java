@@ -5,6 +5,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -47,16 +49,29 @@ public class GymService {
             }
         }
     }
-
-    public String informationSeanceInput(String attribut){
+    String DateDebut="";
+    String DateDefin="";
+    public String informationSeanceInput(String attribut) {
         while(true){//boucle jusqu'a entree valide
             printSeanceInput(attribut);
             String input = stringUserInput();
-            if( !input.isEmpty() || attribut.equals("commentaire")){return input;}//dans le range des cas d'utilisation
-            printEntreeErronee();
-        }
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+            
+            if(attribut.equals("date de debut (JJ-MM-AAAA)") ) DateDebut=input;
+           
+            
+            try {
+				if(attribut.equals("date de fin (JJ-MM-AAAA)")&& !((formatter.parse(DateDebut).compareTo(formatter.parse(input)))<0)) {System.out.println("verifier la date");}else
+				{if( !input.isEmpty() || attribut.equals("commentaire")){
+					return input;//dans le range des cas d'utilisation
+				    }else printEntreeErronee();
+      }
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}}
     }
-
+    
     public Integer menuUserInput(Integer max){
         while(true){//boucle jusqu'a entree valide
             printSelectionMenu();

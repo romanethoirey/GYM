@@ -230,6 +230,7 @@ public class GymController {
                         Membre membre = new Membre(
                                 informationsPersonnelles[0],//Prenom
                                 informationsPersonnelles[1],//Nom
+                                
                                 informationsPersonnelles[2],//Email
                                 GymService.Status.Valide,//status
                                 gymService,
