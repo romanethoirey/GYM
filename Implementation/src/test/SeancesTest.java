@@ -1,4 +1,4 @@
-package test;
+package test;//test
 
 import exception.MauvaisFormatInscriptionSeanceException;
 import exception.MauvaisFormatPresenceSeanceException;
