@@ -33,7 +33,7 @@ public class TestSeance {
             professionnels.addListeProfessionnels(new Professionnel("Michaelis", "Famelis", "CONFIDENTIEL",GymService.Status.Valide,gymService, clients));
             professionnels.addListeProfessionnels(new Professionnel("Thomas", "Schweizer", "CONFIDENTIEL",GymService.Status.Valide,gymService, clients));
            
-			Seance seance =new Seance("Jogging","11","01-01-2019","31-12-2018","12:30",
+			Seance seance =new Seance("Jogging","11","01-01-2017","31-12-2018","12:30",
 				        new ArrayList<Boolean>(Arrays.asList(true,false,true,false,false,true,false)),
 				        "25",
 				        ((Professionnel) professionnels.getListeProfessionnels().toArray()[2]).getNumeroClient(),
