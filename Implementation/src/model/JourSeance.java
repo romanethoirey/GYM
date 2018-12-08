@@ -9,6 +9,8 @@ public class JourSeance {
 	private Long code;
     private ArrayList<InscriptionSeance> listeInscriptionsSeance;
     private ArrayList<PresenceSeance> listePresencesSeance;
+    
+
 	public JourSeance(LocalDate dateJour, Long capacite, Long codeService, Long numSeance, Long codePro) {
 		super();
 		this.dateJour = dateJour;

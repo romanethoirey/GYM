@@ -39,9 +39,10 @@ public class SeancesTest {
 		assertNull(seances.getSceance(0));
 	}
 	
+	
 	@Test
 	public void testGetSeanceTrue() {
 		assertTrue(seances.getSceance(s.getCode()).getFrais()==51.35);
 	}
-	//VOILA
+
 }

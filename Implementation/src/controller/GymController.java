@@ -439,6 +439,9 @@ public class GymController {
         gymService.creationFichierTexte(GymService.TITRE_RAPPORT_SYNTHESE,  contenu);
         gymService.printOperationComplete();
     }
+    /**
+     * @return
+     */
     public Seances GetSeance() {
     	return this.seances;
     }

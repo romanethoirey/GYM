@@ -10,6 +10,13 @@ public class PresenceSeance {
     private Long codeSeance;
     private String commentaire;
 
+    /**
+     * @param numeroProfessionnel
+     * @param numeroMembre
+     * @param codeService
+     * @param commentaire
+     * @throws MauvaisFormatPresenceSeanceException
+     */
     public PresenceSeance(Long numeroProfessionnel, Long numeroMembre, Long codeService, String commentaire) throws MauvaisFormatPresenceSeanceException{
         if((numeroMembre+"").length() != 9 ||//si longueur invalide
                 (numeroProfessionnel+"").length() != 9 ||//si longueur invalide

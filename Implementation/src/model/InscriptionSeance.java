@@ -14,6 +14,14 @@ public class InscriptionSeance {
     private int codeSeance;
     private String commentaire;
 
+    /**
+     * @param dateSeance
+     * @param numeroProfessionnel
+     * @param numeroMembre
+     * @param codeService
+     * @param commentaire
+     * @throws MauvaisFormatInscriptionSeanceException
+     */
     public InscriptionSeance(String dateSeance, Long numeroProfessionnel, Long numeroMembre, int codeService, String commentaire) throws MauvaisFormatInscriptionSeanceException {
 
         if((numeroMembre+"").length() != 9 ||//si longueur invalide
@@ -30,14 +38,23 @@ public class InscriptionSeance {
         this.commentaire = commentaire;
     }
 
+    /**
+     * @return
+     */
     public Long getNumeroMembre() {
         return numeroMembre;
     }
     
+    /**
+     * @return
+     */
     public int getCodeService() {
     	return codeSeance;
     }
 
+    /** (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     @Override
     public String toString() {
         return "InscriptionSeance{" +

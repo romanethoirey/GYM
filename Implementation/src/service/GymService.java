@@ -22,6 +22,9 @@ public class GymService {
 
     //////////INPUT//////////
 
+    /**
+     * @return
+     */
     public Integer intUserInput(){
             Scanner sc = new Scanner(System.in);
             try{
@@ -31,6 +34,9 @@ public class GymService {
             }
     }
 
+    /**
+     * @return
+     */
     public String stringUserInput(){
         Scanner sc = new Scanner(System.in); // scanner pour userinput
         try{
@@ -40,6 +46,10 @@ public class GymService {
         }
     }
 
+    /**
+     * @param attribut
+     * @return
+     */
     public String informationPersonnellesInput(String attribut){
         while(true){//boucle jusqu'a entree valide
             printInformationPersonnellesInput(attribut);
@@ -53,6 +63,10 @@ public class GymService {
     }
     String DateDebut="";
     String DateDefin="";
+    /**
+     * @param attribut
+     * @return
+     */
     public String informationSeanceInput(String attribut) {
         while(true){//boucle jusqu'a entree valide
             printSeanceInput(attribut);
@@ -74,6 +88,10 @@ public class GymService {
 				printEntreeErronee();
 			}}
     }
+    /**
+     * @param s
+     * @return
+     */
     public boolean VerifCode(String s){
     	try {
 			Integer.parseInt(s);
@@ -85,6 +103,10 @@ public class GymService {
     	
     }
     
+    /**
+     * @param max
+     * @return
+     */
     public Integer menuUserInput(Integer max){
         while(true){//boucle jusqu'a entree valide
             printSelectionMenu();
@@ -94,6 +116,9 @@ public class GymService {
         }
     }
 
+    /**
+     * @return
+     */
     public String yesNoInput(){
         while(true){//boucle jusqu'a entree valide
             String input = stringUserInput();
@@ -105,7 +130,7 @@ public class GymService {
     //////////PRINT//////////
 
     public void printMenuPrincipal() {
-        System.out.println("" +// TODO mettre le texte dans une fichier separe ?
+        System.out.println("" +
                 "1) Creer un nouveau compte au gym.\n" +
                 "2) Acceder au gym.\n" +
                 "3) Consulter les inscriptions aux seances de service (pour le Professionnel).\n" +
@@ -118,26 +143,26 @@ public class GymService {
     }
 
     public void printTypeClient() {
-        System.out.println("" +// TODO mettre le texte dans une fichier separe ?
+        System.out.println("" +
                 "Le nouveau client est :\n"+
                 "1) Un nouveau membre.\n" +
                 "2) Un nouveau professionnel.\n");
     }
 
     public void printEntreeErronee(){
-        System.out.println("\nEntree Erronee."); //
+        System.out.println("\nEntree Erronee."); 
     }
 
     public void printMembreNonInscrit(){
-        System.out.println("\nLe membre n'est pas inscrit a cette seance, acces refuse."); //
+        System.out.println("\nLe membre n'est pas inscrit a cette seance, acces refuse."); 
     }
 
     public void printOperationAnnule(){
-        System.out.println("\nOperation Annule."); //
+        System.out.println("\nOperation Annule."); 
     }
 
     public void printOperationComplete(){
-        System.out.println("\nOperation Complete."); //
+        System.out.println("\nOperation Complete."); 
     }
 
     public void printPaiementInput(){
@@ -185,10 +210,18 @@ public class GymService {
 
     //////////AUTRES//////////
 
+    /**
+     * @param n
+     * @return
+     */
     public Long randomLongLengthN(int n){
         return (long)(Math.random() * (long) Math.pow(10, n - 1) * 9) + (long) Math.pow(10, n - 1);
     }
 
+    /**
+     * @param string
+     * @return
+     */
     public ArrayList<Boolean> boolStringToArray(String string){
         ArrayList<Boolean> boolArray = new ArrayList<Boolean>();
 
@@ -202,6 +235,10 @@ public class GymService {
         return boolArray;
     }
 
+    /**
+     * @param titre
+     * @param contenu
+     */
     public void creationFichierTexte(String titre, List<String> contenu){
         try {
             Path file = Paths.get(titre + ".txt");
@@ -212,9 +249,18 @@ public class GymService {
         }
     }
 
+    /**
+     * @param valeur
+     * @return
+     */
     public Double arrondirDoubleDeuxDecimals(Double valeur){
        return Math.floor(valeur * 100) / 100;
     }
+    
+    /**
+     * @param email
+     * @return
+     */
     public static boolean isValid(String email) 
     { 
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+ 
@@ -228,6 +274,10 @@ public class GymService {
         return pat.matcher(email).matches(); 
     } 
     
+    /**
+     * @param currentDate
+     * @return
+     */
     public LocalDate getFirstDayofWeek(LocalDate currentDate) {
     	return currentDate.plusDays(currentDate.getDayOfWeek().compareTo(DayOfWeek.SUNDAY)-1);
     }

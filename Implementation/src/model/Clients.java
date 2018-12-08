@@ -9,6 +9,10 @@ public class Clients {
     private Membres membres;
     private Professionnels professionnels;
 
+    /**
+     * @param membres
+     * @param professionnels
+     */
     public Clients(Membres membres, Professionnels professionnels) {
         this.membres = membres;
         this.professionnels = professionnels;
@@ -16,12 +20,19 @@ public class Clients {
 
     }
 
+    /**
+     * @return
+     */
     public List<Client> getListeClients() {
         this.listeClients.addAll(this.membres.getListeMembres());
         this.listeClients.addAll(this.professionnels.getListeProfessionnels());
         return listeClients;
     }
 
+    /**
+     * @param numeroClient
+     * @return
+     */
     public Client getClient(Long numeroClient){
         return this.getListeClients()//TODO solve bug ou les membres osnt ajoute plusieurs fois ..
                 .stream()
