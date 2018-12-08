@@ -7,6 +7,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -225,6 +227,10 @@ public class GymService {
             return false; 
         return pat.matcher(email).matches(); 
     } 
+    
+    public LocalDate getFirstDayofWeek(LocalDate currentDate) {
+    	return currentDate.plusDays(currentDate.getDayOfWeek().compareTo(DayOfWeek.SUNDAY)-1);
+    }
 
 }
 

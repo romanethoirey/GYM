@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Seance {
     private String titre;
@@ -22,6 +23,7 @@ public class Seance {
     private Long code;
     private Double frais;//TODO couper le signe de $ a la fin du String
     private String commentaire;
+    private ArrayList<JourSeance> listeJourSeance;
     private ArrayList<InscriptionSeance> listeInscriptionsSeance;
     private ArrayList<PresenceSeance> listePresencesSeance;
 
@@ -31,6 +33,7 @@ public class Seance {
         this.dateDebut = LocalDate.parse(dateDebut, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
         this.dateFin = LocalDate.parse(dateFin, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
         this.heureSeance = LocalTime.parse(heureSeance, DateTimeFormatter.ofPattern("HH:mm"));
+        
 
         if(recurHebdo.size() != 7 || // Si pas exactement 7 jours
            Integer.parseInt(capacite) > 30 || // si capacite de plus de 30 membres
@@ -52,6 +55,34 @@ public class Seance {
         this.commentaire = commentaire;
         this.listeInscriptionsSeance = new ArrayList<InscriptionSeance>();
         this.listePresencesSeance = new ArrayList<PresenceSeance>();
+        this.listeJourSeance = new ArrayList<JourSeance>();
+        genererJour(gymService);
+    }
+    
+    private void genererJour(GymService gymService) {
+    	LocalDate weekcounter = gymService.getFirstDayofWeek(this.dateDebut);
+    	System.out.println(weekcounter +"+"+ this.dateDebut);
+    	List<Integer> recurInt = getrecurInt();
+    	LocalDate currentDate = weekcounter;
+    	long count = 0;
+    	while (currentDate.isBefore(this.dateFin) && count < 100){
+	    	for(int i = 0; i < recurInt.size() && currentDate.isBefore(this.dateFin) && count < 100 ; i++) {
+	    		//System.out.println("Date courante : " + currentDate + "+ " + recurInt.get(i)+ "  weekcounter : "+ weekcounter);
+	    		currentDate = currentDate.plusDays((long)recurInt.get(i));
+	    		if(currentDate.isAfter(this.dateDebut) && currentDate.isBefore(this.dateFin)) {
+		    		String numProSt = Long.toString(this.numeroProfessionnel);
+		    		numProSt = numProSt.substring(numProSt.length()-2, numProSt.length());
+		    		JourSeance nouveauJour = new JourSeance(currentDate,this.capacite,this.code,count,Long.parseLong(numProSt));
+		    		listeJourSeance.add(nouveauJour);
+		    		count++;
+	    		}
+	    		currentDate = weekcounter;
+	    	}
+	    	weekcounter = weekcounter.plusDays(7);
+    		currentDate = weekcounter;
+    	}
+    	if(count == 100)
+    		System.out.println("Toutes les séances n'ont pas pu être créées (+ de 99), la dernière date disponible est : " + currentDate);
     }
 
     public Long getCode() {
@@ -124,6 +155,17 @@ public class Seance {
     public LocalDate getDatefin() {
     	return this.dateFin;
     }
+    
+    public List<Integer> getrecurInt(){
+    	List<Integer> rep = new ArrayList<Integer>();
+    	for(int i = 0; i < 7; i ++) {
+    		if(this.recurHebdo.get(i) == true)
+    			rep.add(i);
+    	}
+    	return rep;
+    }
+    
+    
     @Override
     public String toString() {
         return "" +
