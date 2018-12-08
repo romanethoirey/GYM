@@ -118,8 +118,8 @@ public class GymController {
                         seances));
                 seances.addListeSeances(new Seance(
                         "Soccer","190",
-                        "01-03-2018",
-                        "31-07-2018",
+                        "01-12-2018",
+                        "31-03-2019",
                         "08:30",
                         new ArrayList<Boolean>(Arrays.asList(true,false,false,true,false,false,true)),
                         "5",

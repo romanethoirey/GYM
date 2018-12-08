@@ -175,7 +175,7 @@ public class Seance {
     	for(int i=0;i<listeJour.size();i++) {
     		System.out.println();
     		if(listeJour.get(i).getDateJour().isAfter(datecourrante)) {
-    			listeCode.add("\n  Seance numéro : "+listeJour.get(i).getCode()
+    			listeCode.add("\n  Seance numéro :"+listeJour.get(i).getCode()
 						+" du "+listeJour.get(i).getDateJour());
     			
     			if(listeCode.size()==10) {
@@ -190,7 +190,7 @@ public class Seance {
     @Override
     public String toString() {
         return "" +
-               titre +" "+code+'\n'+
+               titre + " "+code+'\n'+
                 "  heureCreation: " + heureCreation +
                 ", dateDebut: " + dateDebut +
                 ", dateFin: " + dateFin +
