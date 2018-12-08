@@ -139,71 +139,36 @@ public class GymController {
         while (true) {
 
             gymService.printMenuPrincipal();//(etat);
-            GymService.Status status;
-            ArrayList identification;
 
             switch (gymService.menuUserInput(GymService.NOMBRE_CAS_DUTILISATION)) {
                 case 1:// Creation d'un client
                     nouveauCompte();
                     System.out.println("\n\n");
                     break;
-                case 2:// Acceder au gym
-                    status  = (GymService.Status)identificationClient().get(0);
-                    gymService.printStatusClient(status);
-                    if(status.equals(GymService.Status.Valide)){
-                        gymService.printOuvertureTourniquet();
-                    }
-                    System.out.println("\n\n");
+                    
+                case 2:// Connexion
+                	int choix=choixMenu();
+                	if(choix==1) {
+                		Membre m = (Membre) identificationClient();
+                		MenuMembre(m);
+                	}
+                	else {
+                		if(choix ==2) {
+                			Professionnel p  = (Professionnel)identificationClient();
+                			menuProfessionel(p);
+                		}
+                		else {
+                			gymService.printEntreeErronee();
+                		}
+                	}
+                	
                     break;
-                case 3://Consulter les inscriptions aux seances de service (pour le Professionnel)
-                    identification  = identificationClient();
-                    status  = (GymService.Status)identification.get(0);
-                    gymService.printStatusClient(status);
-                    if(status.equals(GymService.Status.Valide) && identification.get(2).equals("professionnel")){
-                        consultationInscriptionsSeances((Long)identification.get(1));
-                    }
-                    System.out.println("\n\n");
+                    
+                case 3://Gestion
+                    menuGestion();
                     break;
-                case 4://Creer une seance de service
-                    identification  = identificationClient();
-                    status  = (GymService.Status)identification.get(0);
-                    gymService.printStatusClient(status);
-                    if(status.equals(GymService.Status.Valide) && identification.get(2).equals("professionnel")){
-                        nouvelleSeance((Long)identification.get(1));
-                    }
-                    System.out.println("\n\n");
-                    break;
-                case 5://Consulter la liste des seances de service pour une possible inscription
-                    consultationListeSeances();
-                    gymService.printChoixInscription();
-                    if(gymService.yesNoInput().equals("y")){
-                        identification  = identificationClient();
-                        gymService.printStatusClient((GymService.Status)identification.get(0));
-                        if((identification.get(0)).equals(GymService.Status.Valide) && identification.get(2).equals("membre")) {
-                            inscriptionSeance((Long)identification.get(1));
-                        }
-                    }
-                    System.out.println("\n\n");
-                    break;
-                case 6://Confirmer la presence du Membre a une seance de service
-                    identification  = identificationClient();
-                    status  = (GymService.Status)identification.get(0);
-                    gymService.printStatusClient(status);
-                    if(status.equals(GymService.Status.Valide) && identification.get(2).equals("membre")){
-                        consultationListeSeances();
-                        confirmationPresenceSeance(Long.parseLong(gymService.informationSeanceInput("code")),(Long)identification.get(1));
-                    }
-                    System.out.println("\n\n");
-                    break;
-                case 7:// Créer le fichier TEF (SIMULATION, normalement seulement l'horloge du systeme)
-                    creationFichierTEF();
-                    System.out.println("\n\n");
-                    break;
-                case 8://Créer le rapport de synthèse(SIMULATION, normalement seulement l'horloge du systeme et le gerant)
-                    creationRapportSynthese();
-                    System.out.println("\n\n");
-                    break;
-                case 9://Quitter le logiciel
+                    
+                case 4://Quitter le logiciel
                     System.exit(0);
                     break;
                 default:
@@ -218,6 +183,181 @@ public class GymController {
 
         }
     }
+    private void MenuMembre(Membre m) {
+    	
+    		gymService.printNomCodeClient(m);
+    		gymService.printMenuMembre();//(etat);
+        	GymService.Status status = m.getStatus();
+        	Long numm = m.getNumeroClient();
+        	
+	    	switch (gymService.menuUserInput(GymService.NOMBRE_CAS_DUTILISATION)) {
+	    		case 1:
+	                gymService.printStatusClient(status);
+	                if(status.equals(GymService.Status.Valide)){
+	                    gymService.printOuvertureTourniquet();
+	                }
+	                System.out.println("\n\n");
+	                gymService.printDeconnexion();
+	                String answer=gymService.yesNoInput();
+	    	    	if(answer.equals("y")){
+	                    menuPrincipal();
+	                }
+	    			else {
+	    				if(answer.equals("n"))
+	    					MenuMembre(m);
+	    				else
+	    					gymService.printEntreeErronee();
+	    			}
+	    			break;
+	    			
+	    		case 2:
+	    			paiementCompte(m.getNumeroClient());
+	    			System.out.println("\n\n");
+	    			break;
+	    			
+	    		case 3:
+	    			consultationListeSeances();
+                    gymService.printChoixInscription();
+                    if(gymService.yesNoInput().equals("y")){
+                        gymService.printStatusClient(status);
+                        if((status).equals(GymService.Status.Valide)) {
+                            inscriptionSeance(numm);
+                        }
+                    }
+                    System.out.println("\n\n");
+                    break;
+                  
+	    		case 4:
+	    			
+	    			break;
+	    		
+	    		case 5:
+	    			gymService.printDeconnexion();
+	    	    	if(gymService.yesNoInput().equals("y")){
+	                    menuPrincipal();
+	                }
+	    			else {
+	    				if(gymService.yesNoInput().equals("n"))
+	    					MenuMembre(m);
+	    				else
+	    					gymService.printEntreeErronee();
+	    			}
+	    			break;
+	    			
+	    		default:
+                    gymService.printEntreeErronee();
+                    break;
+            }
+	    	
+    }
+    
+    public void menuProfessionel(Professionnel p) {
+    	
+    	while(true) {
+    		gymService.printNomCodeClient(p);
+    		gymService.printMenuProfessionnel();//(etat);
+    		GymService.Status status;
+    		status  = (GymService.Status)p.getStatus();
+    		Long nump=p.getNumeroClient();
+	    	switch (gymService.menuUserInput(GymService.NOMBRE_CAS_DUTILISATION)) {
+		    	case 1:
+	                gymService.printStatusClient(status);
+	                if(status.equals(GymService.Status.Valide) ){
+	                    consultationInscriptionsSeances(nump);
+	                }
+	                System.out.println("\n\n");
+	                break;
+	                
+		    	case 2:
+	                gymService.printStatusClient(status);
+	                if(status.equals(GymService.Status.Valide)){
+	                    nouvelleSeance(nump);
+	                }
+	                System.out.println("\n\n");
+	                break;
+	            
+		    	case 3:
+                    gymService.printStatusClient(status);
+                    if(status.equals(GymService.Status.Valide)){
+                        consultationListeSeances();
+                        confirmationPresenceSeance(Long.parseLong(gymService.informationSeanceInput("code")),nump);
+                    }
+                    System.out.println("\n\n");
+                    break;
+                
+		    	case 4:
+		    		gymService.printDeconnexion();
+	    	    	if(gymService.yesNoInput().equals("y")){
+	                    menuPrincipal();
+	                }
+	    			else {
+	    				if(gymService.yesNoInput().equals("n"))
+	    					menuProfessionel(p);
+	    				else
+	    					gymService.printEntreeErronee();
+	    			}
+	    			break;
+	    		
+		    	default:
+                    gymService.printEntreeErronee();
+                    break;
+	    	}
+    	}
+    }
+    
+    public void menuGestion() {
+    	 while (true) {
+
+             gymService.printMenuGestion();//(etat);
+             GymService.Status status;
+             ArrayList identification;
+
+             switch (gymService.menuUserInput(GymService.NOMBRE_CAS_DUTILISATION)) {
+	             case 1:// Créer le fichier TEF 
+	                 creationFichierTEF();
+	                 System.out.println("\n\n");
+	                 break;
+	                 
+	             case 2://Créer le rapport de synthèse
+	                 creationRapportSynthese();
+	                 System.out.println("\n\n");
+	                 break;
+	                 
+	             case 3:
+	            	 gymService.printDeconnexion();
+		    	    	if(gymService.yesNoInput().equals("y")){
+		                    menuPrincipal();
+		                }
+		    			else {
+		    				if(gymService.yesNoInput().equals("n"))
+		    					menuGestion();
+		    				else
+		    					gymService.printEntreeErronee();
+		    			}
+	            	 break;
+	            	
+	             default:
+	                    gymService.printEntreeErronee();
+	                    break;	 
+             }
+    	 }    
+    }
+    
+    //retourne 1 ou 2 en fonction de si c'est un membre ou un pro
+    private int choixMenu() {
+    	gymService.printTypeClient();
+    	switch (gymService.menuUserInput(GymService.NOMBRE_CAS_DUTILISATION)) {
+    		case 1:
+    			return 1;
+    		case 2:
+    			return 2;
+    		default:
+                gymService.printEntreeErronee();
+                return 0;	
+    			
+    	}
+    }
+    
     
     private void paiementCompte(Long numeroClient) {
     	Membre membre = membres.getMembre(numeroClient);
@@ -227,7 +367,7 @@ public class GymController {
         gymService.printOperationComplete();
     	
     }
-
+    
     private void nouveauCompte(){
         String[] informationsPersonnelles = informationsPersonnelles();
         gymService.printTypeClient();//(etat);
@@ -336,19 +476,12 @@ public class GymController {
         }
     }
 
-    private ArrayList identificationClient(){
+    private Client identificationClient(){
 
         String inputsa = gymService.informationPersonnellesInput("numero");
-
         Long numeroClient = Long.parseLong(inputsa);
-
-        Client client = clients.getClient(numeroClient);
-
-        if(client != null){
-            return new ArrayList(Arrays.asList(client.getStatus(),numeroClient,client.getType()));
-        }else {
-            return new ArrayList(Arrays.asList(GymService.Status.Inexistant,numeroClient,"Inconnu"));
-        }
+        return clients.getClient(numeroClient);
+       
     }
 
     private String[] informationsPersonnelles(){

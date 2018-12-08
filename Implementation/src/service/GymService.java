@@ -1,5 +1,6 @@
 package service;
 
+import model.Client;
 import model.Seance;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -131,22 +132,49 @@ public class GymService {
 
     public void printMenuPrincipal() {
         System.out.println("" +
-                "1) Creer un nouveau compte au gym.\n" +
-                "2) Acceder au gym.\n" +
-                "3) Consulter les inscriptions aux seances de service (pour le Professionnel).\n" +
-                "4) Creer une seance de service.\n" +
-                "5) Consulter la liste des seances de service pour une possible inscription.\n" +
-                "6) Confirmer la presence du Membre a une seance de service.\n" +
-                "7) Creer le fichier TEF (SIMULATION, normalement seulement l'Horloge du systeme)\n" +
-                "8) Creer le rapport de synthèse (SIMULATION, normalement seulement l'Horloge du systeme et le Gerant du gym)\n\n"+
-                "9) Quitter le logiciel");
+                "1) Création un nouveau compte au gym.\n" +
+                "2) Connexion.\n" +
+                "3) Gestion.\n\n" +
+                "4) Déconnexion du logiciel.\n");
+    }
+    
+    public void printMenuMembre() {
+    	System.out.println(""+
+    			"1) Accès au Gym.\n"+
+    			"2) Paiement des frais d'adhésion.\n"+
+    			"3) Inscription à une séance.\n"+
+    			"4) Présentation de son QR code pour confirmation à une séance.\n\n"+
+    			"5) Déconnexion");
+    }
+    
+    public void printMenuProfessionnel() {
+    	System.out.println(""+
+    			"1) Consultation des incrits.\n"+
+    			"2) Création un service.\n"+
+    			"3) Confirmation présence des clients à une séance.\n\n"+
+    			"4) Déconnexion");
+    }
+    
+    public void printMenuGestion() {
+    	System.out.println(""+
+    			"1) Création du TEF.\n"+
+    			"2) Création du rapport de synthèse.\n\n"+
+    			"3) Déconnexion");
+    }
+    
+    public void printDeconnexion() {
+    	System.out.println("\nEtes vous sure de vouloir vous déconnectez ? (y/n)");
     }
 
     public void printTypeClient() {
         System.out.println("" +
-                "Le nouveau client est :\n"+
-                "1) Un nouveau membre.\n" +
-                "2) Un nouveau professionnel.\n");
+                "Vous êtes un :\n"+
+                "1) Un membre.\n" +
+                "2) Un professionnel.\n");
+    }
+    
+    public void printNomCodeClient(Client c) {
+    	System.out.println("Bonjour, "+ c.getPrenom()+" "+c.getNom()+" "+c.getNumeroClient()+'\n');
     }
 
     public void printEntreeErronee(){
