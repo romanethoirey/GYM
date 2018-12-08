@@ -150,7 +150,8 @@ public class GymController {
                 	int choix=choixMenu();
                 	if(choix==1) {
                 		Membre m = (Membre) identificationClient();
-                		MenuMembre(m);
+                		if(m != null)
+                			MenuMembre(m);
                 	}
                 	else {
                 		if(choix ==2) {
@@ -280,7 +281,7 @@ public class GymController {
                     gymService.printStatusClient(status);
                     if(status.equals(GymService.Status.Valide)){
                         consultationListeSeances();
-                        confirmationPresenceSeance(Long.parseLong(gymService.informationSeanceInput("code")),nump);
+                        confirmationPresenceSeance(gymService.informationSeanceInput("code"),nump);
                     }
                     System.out.println("\n\n");
                     break;
@@ -427,18 +428,20 @@ public class GymController {
 
     private void inscriptionSeance(Long numeroClient) {
         String code = gymService.informationSeanceInput("code");
+        String seanceCode = code.substring(0, 3);
+        int jourCode = Integer.parseInt(code.substring(3, 5));
         gymService.printFraisSeance(seances.getSceance(Long.parseLong(code)).getFrais());
         gymService.printPaiementInput();
         if(gymService.yesNoInput().equals("y")){
             try{
-                seances.getSceance(Long.parseLong(code)).addInscription(new InscriptionSeance(
+            	//pb ici
+                seances.getSceance(Long.parseLong(seanceCode)).getJourSeance(jourCode).addInscription(new InscriptionSeance(
                         gymService.informationSeanceInput("date du rendez-vous (jj-mm-aaaa)"),
                         seances.getSceance(Long.parseLong(code)).getNumeroProfessionnel(),
                         numeroClient,
                         Integer.parseInt(code),
                         gymService.informationSeanceInput("commentaire")
                 ));
-
                 gymService.printOperationComplete();
 
             }catch (TropParticipantsException|MauvaisFormatInscriptionSeanceException e){
@@ -449,17 +452,20 @@ public class GymController {
         }
     }
 
-    private void confirmationPresenceSeance(Long code, Long numeroMembre){
-        Seance seance = seances.getSceance(code);
+    private void confirmationPresenceSeance(String code, Long numeroMembre){
+    	long seanceCode = Long.parseLong(code);
+    	long seanceIndex = Long.parseLong(code.substring(0, 3));
+        int jourIndex = Integer.parseInt(code.substring(3, 5));
+    	Seance seance = seances.getSceance(seanceIndex);
         gymService.printInfosSeance(seance);
-
+        JourSeance current = seance.getJourSeance(jourIndex);
         if(!seance.equals(null)){
-            if(seance.membreInscrit(numeroMembre)){
+            if(current.membreInscrit(numeroMembre)){
                 try {
-                    seance.addPresence(new PresenceSeance(
+                    current.addPresence(new PresenceSeance(
                             seance.getNumeroProfessionnel(),
                             numeroMembre,
-                            code,
+                            seanceCode,
                             gymService.informationSeanceInput("commentaire")
                     ));
 
@@ -478,10 +484,19 @@ public class GymController {
 
     private Client identificationClient(){
 
-        String inputsa = gymService.informationPersonnellesInput("numero");
-        Long numeroClient = Long.parseLong(inputsa);
-        return clients.getClient(numeroClient);
-       
+        String inputsa = gymService.informationPersonnellesInput("email");
+        Client rep = clients.getClient(inputsa);
+        if(rep != null) {
+	        if(rep.getStatus().equals(GymService.Status.Valide))
+	        	return rep;
+	        else {
+	        	System.out.println("Erreur : Le membre avec l'adresse email : " + inputsa + " est suspendu");
+	        	return null;
+	        }
+        }
+        gymService.printEntreeErronee();
+        gymService.printOperationAnnule();
+        return null;
     }
 
     private String[] informationsPersonnelles(){

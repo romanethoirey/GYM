@@ -40,4 +40,12 @@ public class Clients {
                 .findAny()
                 .orElse(null);
     }
+    public Client getClient(String email){
+        return this.getListeClients()//TODO solve bug ou les membres osnt ajoute plusieurs fois ..
+                .stream()
+                .filter(client -> client.getMail().equals(email))
+                .findAny()
+                .orElse(null);
+    }
 }
+

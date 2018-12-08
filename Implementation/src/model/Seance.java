@@ -24,8 +24,6 @@ public class Seance {
     private Double frais;//TODO couper le signe de $ a la fin du String
     private String commentaire;
     private ArrayList<JourSeance> listeJourSeance;
-    private ArrayList<InscriptionSeance> listeInscriptionsSeance;
-    private ArrayList<PresenceSeance> listePresencesSeance;
 
     public Seance(String titreSeance, String code,String dateDebut, String dateFin, String heureSeance, ArrayList<Boolean> recurHebdo, String capacite, Long numeroProfessionnel, String frais, String commentaire, GymService gymService, Seances seances) throws MauvaisFormatSeanceException{
         this.titre = titreSeance;
@@ -53,8 +51,6 @@ public class Seance {
         this.numeroProfessionnel = numeroProfessionnel;
         this.frais = Double.parseDouble(frais);
         this.commentaire = commentaire;
-        this.listeInscriptionsSeance = new ArrayList<InscriptionSeance>();
-        this.listePresencesSeance = new ArrayList<PresenceSeance>();
         this.listeJourSeance = new ArrayList<JourSeance>();
         genererJour(gymService);
     }
@@ -100,26 +96,7 @@ public class Seance {
         return numeroProfessionnel;
     }
 
-    public void addInscription(InscriptionSeance inscriptionSeance) throws TropParticipantsException{
-        if(this.listeInscriptionsSeance.size()<this.capacite){this.listeInscriptionsSeance.add(inscriptionSeance);}
-        else{throw new TropParticipantsException("La limite d'inscriptions est deja atteinte.");}
-    }
-
-    public ArrayList<InscriptionSeance> getListeInscriptionsSeance() {
-        return this.listeInscriptionsSeance;
-    }
-
-    public void addPresence(PresenceSeance presenceSeance){
-        this.listePresencesSeance.add(presenceSeance);
-    }
-
-    public ArrayList<PresenceSeance> getListePresenceSeance() {
-        return this.listePresencesSeance;
-    }
-
-    public boolean membreInscrit(Long numeroMembre){
-        return this.listeInscriptionsSeance.stream().anyMatch(inscription->inscription.getNumeroMembre().equals(numeroMembre));
-    }
+   
     
     public String affichageJour(ArrayList<Boolean> recurHebdo) {
     	String list = "";
@@ -185,6 +162,10 @@ public class Seance {
     	}
     	listeCode.add("Il n'y a plus de séances disponibles");
     	return listeCode;
+    }
+    
+    public JourSeance getJourSeance(int i) {
+    	return listeJourSeance.get(i);
     }
     
     @Override

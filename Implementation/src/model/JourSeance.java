@@ -3,6 +3,8 @@ package model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import exception.TropParticipantsException;
+
 public class JourSeance {
 	private LocalDate dateJour;
 	private Long capacite;
@@ -29,6 +31,25 @@ public class JourSeance {
 	public Long getCode() {
 		return this.code;
 	}
-    
-	
+	 public void addInscription(InscriptionSeance inscriptionSeance) throws TropParticipantsException{
+	        if(this.listeInscriptionsSeance.size()<this.capacite){this.listeInscriptionsSeance.add(inscriptionSeance);}
+	        else{throw new TropParticipantsException("La limite d'inscriptions est deja atteinte.");}
+	    }
+
+    public ArrayList<InscriptionSeance> getListeInscriptionsSeance() {
+        return this.listeInscriptionsSeance;
+    }
+
+    public void addPresence(PresenceSeance presenceSeance){
+        this.listePresencesSeance.add(presenceSeance);
+    }
+
+    public ArrayList<PresenceSeance> getListePresenceSeance() {
+        return this.listePresencesSeance;
+    }
+
+    public boolean membreInscrit(Long numeroMembre){
+        return this.listeInscriptionsSeance.stream().anyMatch(inscription->inscription.getNumeroMembre().equals(numeroMembre));
+    }
+
 }

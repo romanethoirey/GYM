@@ -235,7 +235,7 @@ public class GymService {
         System.out.println("Titre : "+seance.getTitre());
         seance.getListeInscriptionsSeance().stream().forEach(inscription ->System.out.println(inscription.toString()));
     }
-
+    
     //////////AUTRES//////////
 
     /**
