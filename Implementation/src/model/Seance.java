@@ -61,7 +61,6 @@ public class Seance {
     
     private void genererJour(GymService gymService) {
     	LocalDate weekcounter = gymService.getFirstDayofWeek(this.dateDebut);
-    	System.out.println(weekcounter +"+"+ this.dateDebut);
     	List<Integer> recurInt = getrecurInt();
     	LocalDate currentDate = weekcounter;
     	long count = 0;
@@ -165,16 +164,40 @@ public class Seance {
     	return rep;
     }
     
+    public List<JourSeance> getJourSeance(){
+    	return this.listeJourSeance;
+    }
+    
+    //affichage les 10 prochaines séances
+    public List<String> affichageCodeSeance(List<JourSeance> listeJour) {
+    	List<String> listeCode= new ArrayList<String>();
+    	LocalDate datecourrante = LocalDate.now();
+    	for(int i=0;i<listeJour.size();i++) {
+    		System.out.println();
+    		if(listeJour.get(i).getDateJour().isAfter(datecourrante)) {
+    			listeCode.add("\n  Seance numéro :"+listeJour.get(i).getCode()
+						+" du "+listeJour.get(i).getDateJour());
+    			
+    			if(listeCode.size()==10) {
+    				return listeCode;
+    			}	
+    		}
+    	}
+    	listeCode.add("Il n'y a plus de séances disponibles");
+    	return listeCode;
+    }
     
     @Override
     public String toString() {
         return "" +
-               titre +" "+code+ '\n'+
+               titre +'\n'+
                 "  heureCreation: " + heureCreation +
                 ", dateDebut: " + dateDebut +
                 ", dateFin: " + dateFin +
                 ", heureSeance: " + heureSeance + ",\n" +
                 "  Récurrence: " + affichageJour(recurHebdo) + '\n' +
+                "  Code des séances de la semaine:"+'\n'+
+                "  "+affichageCodeSeance(listeJourSeance)+'\n'+
                 "  capacite: " + capacite + '\n' +
                 "  numeroProfessionnel: " + numeroProfessionnel + '\n' +
                 "  frais: " + frais + "$\n" +

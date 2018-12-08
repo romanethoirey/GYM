@@ -10,7 +10,7 @@ public class JourSeance {
     private ArrayList<InscriptionSeance> listeInscriptionsSeance;
     private ArrayList<PresenceSeance> listePresencesSeance;
     
-
+    
 	public JourSeance(LocalDate dateJour, Long capacite, Long codeService, Long numSeance, Long codePro) {
 		super();
 		this.dateJour = dateJour;
@@ -20,9 +20,15 @@ public class JourSeance {
 			numSeanceSt = '0'+numSeanceSt;
 		String codeSt = Long.toString(codeService)+numSeanceSt+Long.toString(codePro);
 		this.code = Long.parseLong(codeSt);
-		System.out.println(code + " : " + dateJour );
 	}
     
+	public LocalDate getDateJour() {
+		return this.dateJour;
+	}
+	
+	public Long getCode() {
+		return this.code;
+	}
     
 	
 }
