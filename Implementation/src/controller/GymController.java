@@ -184,9 +184,9 @@ public class GymController {
         }
     }
     private void MenuMembre(Membre m) {
-    	
+    		//affichage menu membre
     		gymService.printNomCodeClient(m);
-    		gymService.printMenuMembre();//(etat);
+    		gymService.printMenuMembre();
         	GymService.Status status = m.getStatus();
         	Long numm = m.getNumeroClient();
         	
@@ -579,4 +579,5 @@ public class GymController {
     public Seances GetSeance() {
     	return this.seances;
     }
+    
 }
