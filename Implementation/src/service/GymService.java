@@ -18,7 +18,7 @@ public class GymService {
     public final static String TITRE_FICHIER_TEF = "GYM_fichier_TEF";
     public final static String TITRE_RAPPORT_SYNTHESE = "GYM_Rapport_Synthese";
 
-    public enum Status{Suspendu, Valide, Inexistant, Expire}//Status possible d'un membre
+    public enum Status{Suspendu, Valide, Inexistant}//Status possible d'un membre
 
     //////////INPUT//////////
 

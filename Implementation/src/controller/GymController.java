@@ -135,7 +135,7 @@ public class GymController {
     }
 
     public void menuPrincipal() {
-
+    	//
         while (true) {
 
             gymService.printMenuPrincipal();//(etat);
@@ -218,6 +218,15 @@ public class GymController {
 
         }
     }
+    
+    private void paiementCompte(Long numeroClient) {
+    	Membre membre = membres.getMembre(numeroClient);
+    	gymService.printPaiementInput();
+    	if(gymService.yesNoInput().equals("y"))
+        	membre.setStatus(GymService.Status.Valide);
+        gymService.printOperationComplete();
+    	
+    }
 
     private void nouveauCompte(){
         String[] informationsPersonnelles = informationsPersonnelles();
@@ -225,23 +234,15 @@ public class GymController {
 
         switch (gymService.menuUserInput(2)){//paiement seulement si client
             case 1://Membre
-                gymService.printPaiementInput();
-                if(gymService.yesNoInput().equals("y")){
-                        Membre membre = new Membre(
-                                informationsPersonnelles[0],//Prenom
-                                informationsPersonnelles[1],//Nom
-                                
-                                informationsPersonnelles[2],//Email
-                                GymService.Status.Valide,//status
-                                gymService,
-                                clients);
-
-                    membres.addListeMembres(membre);
-
-                    gymService.printOperationComplete();
-                }else{
-                    gymService.printOperationAnnule();
-                }
+                Membre membre = new Membre(
+                        informationsPersonnelles[0],//Prenom
+                        informationsPersonnelles[1],//Nom
+                        
+                        informationsPersonnelles[2],//Email
+                        GymService.Status.Suspendu,//status
+                        gymService,
+                        clients);
+                membres.addListeMembres(membre);
                 break;
             case 2://Professionnel
                     Professionnel professionnel = new Professionnel(
