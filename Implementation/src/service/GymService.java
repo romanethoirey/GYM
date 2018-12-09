@@ -24,7 +24,7 @@ public class GymService {
     //////////INPUT//////////
 
     /**
-     * @return
+     * @return l'entier entré au clavier
      */
     public Integer intUserInput(){
             Scanner sc = new Scanner(System.in);
@@ -36,20 +36,20 @@ public class GymService {
     }
 
     /**
-     * @return
+     * @return La chaine de caractère entrée au clavier
      */
     public String stringUserInput(){
         Scanner sc = new Scanner(System.in); // scanner pour userinput
         try{
             return sc.nextLine();
-        }catch (InputMismatchException e){//TODO Faire le bon exception handling
+        }catch (InputMismatchException e){
             return "";
         }
     }
 
     /**
-     * @param attribut
-     * @return
+     * @param attribut L'information personnelle à modifier
+     * @return la chaine de caractère entrée par l'utilisateur
      */
     public String informationPersonnellesInput(String attribut){
         while(true){//boucle jusqu'a entree valide
@@ -65,8 +65,8 @@ public class GymService {
     String DateDebut="";
     String DateDefin="";
     /**
-     * @param attribut
-     * @return
+     * @param attribut L'information sur la séance à modifier
+     * @return la chaine de caractère entrée par l'utilisateur
      */
     public String informationSeanceInput(String attribut) {
         while(true){//boucle jusqu'a entree valide
@@ -90,8 +90,9 @@ public class GymService {
 			}}
     }
     /**
-     * @param s
-     * @return
+     * Vérifie si le code est bien de taille 3 et du bon format
+     * @param s La chaine de caractère à vérifier
+     * @return le résultat de la vérification
      */
     public boolean VerifCode(String s){
     	try {
@@ -105,8 +106,9 @@ public class GymService {
     }
     
     /**
-     * @param max
-     * @return
+     * Lit l'entrée clavier de l'utilisateur
+     * @param max Le numéro maximum du choix possible
+     * @return L'entier entré parr l'utilisateur
      */
     public Integer menuUserInput(Integer max){
         while(true){//boucle jusqu'a entree valide
@@ -118,7 +120,8 @@ public class GymService {
     }
 
     /**
-     * @return
+     * Lit l'entrée Oui/non de l'utilisateur
+     * @return y ou n selon l'entrée
      */
     public String yesNoInput(){
         while(true){//boucle jusqu'a entree valide
@@ -239,16 +242,18 @@ public class GymService {
     //////////AUTRES//////////
 
     /**
-     * @param n
-     * @return
+     * Crée un nombre random de longueur  n
+     * @param n la longueur du nombre à générer
+     * @return le nombre random
      */
     public Long randomLongLengthN(int n){
         return (long)(Math.random() * (long) Math.pow(10, n - 1) * 9) + (long) Math.pow(10, n - 1);
     }
 
     /**
-     * @param string
-     * @return
+     * Transforme une chaine de caractère (1 0 etc) en tableau de boolean
+     * @param string La chaine à traiter
+     * @return Le tableau de boolean correspondant
      */
     public ArrayList<Boolean> boolStringToArray(String string){
         ArrayList<Boolean> boolArray = new ArrayList<Boolean>();
@@ -264,8 +269,9 @@ public class GymService {
     }
 
     /**
-     * @param titre
-     * @param contenu
+     * Crée un fichier texte
+     * @param titre Le titre du ficher
+     * @param contenu Le contenu du fichier
      */
     public void creationFichierTexte(String titre, List<String> contenu){
         try {
@@ -277,17 +283,14 @@ public class GymService {
         }
     }
 
-    /**
-     * @param valeur
-     * @return
-     */
     public Double arrondirDoubleDeuxDecimals(Double valeur){
        return Math.floor(valeur * 100) / 100;
     }
     
     /**
-     * @param email
-     * @return
+     * Vérifie si l'email est valide
+     * @param email l'email à vérifier
+     * @return true si l'email est valide
      */
     public static boolean isValid(String email) 
     { 
@@ -303,8 +306,9 @@ public class GymService {
     } 
     
     /**
-     * @param currentDate
-     * @return
+     * Retourne la date du premier jour de la semaine en fonction de la date passé en paramètre
+     * @param currentDate La date dont on cherche la date du premier jour de la semaine
+     * @return Le premier jour de la semaine correspondant
      */
     public LocalDate getFirstDayofWeek(LocalDate currentDate) {
     	return currentDate.plusDays(currentDate.getDayOfWeek().compareTo(DayOfWeek.SUNDAY)-1);

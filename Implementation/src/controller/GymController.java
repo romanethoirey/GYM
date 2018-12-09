@@ -7,6 +7,7 @@ import exception.TropParticipantsException;
 import model.*;
 import service.GymService;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +21,9 @@ public class GymController {
     Seances seances = new Seances();
     Clients clients = new Clients(membres, professionnels);
 
+    /**
+     * Initialise les données avec quelques exemples
+     */
     public void initialisation(){
         gymService.printMockData();
 
@@ -134,6 +138,9 @@ public class GymController {
         }
     }
 
+    /**
+     * Affiche le Menu Principal, qui permet de se connecter, de créer un compte ou de gérer GYM
+     */
     public void menuPrincipal() {
     	//
         while (true) {
@@ -184,6 +191,10 @@ public class GymController {
 
         }
     }
+    /**
+     * Affiche le menu du Membre
+     * @param m Le membre courant
+     */
     private void MenuMembre(Membre m) {
     	
     		gymService.printNomCodeClient(m);
@@ -229,7 +240,7 @@ public class GymController {
                     break;
                   
 	    		case 4:
-	    			
+	    			System.out.println("Numéro client : " + m.getNumeroClient());
 	    			break;
 	    		
 	    		case 5:
@@ -252,6 +263,10 @@ public class GymController {
 	    	
     }
     
+    /**
+     * Affiche le menu du professionnel
+     * @param p Le professionnel courant
+     */
     public void menuProfessionel(Professionnel p) {
     	
     	while(true) {
@@ -280,7 +295,7 @@ public class GymController {
 		    	case 3:
                     gymService.printStatusClient(status);
                     if(status.equals(GymService.Status.Valide)){
-                        consultationListeSeances();
+                        consultationListeSeances(p.getNumeroClient());
                         confirmationPresenceSeance(gymService.informationSeanceInput("code"),nump);
                     }
                     System.out.println("\n\n");
@@ -306,6 +321,9 @@ public class GymController {
     	}
     }
     
+    /**
+     * Affiche le menu du Gestionnaire
+     */
     public void menuGestion() {
     	 while (true) {
 
@@ -345,6 +363,10 @@ public class GymController {
     }
     
     //retourne 1 ou 2 en fonction de si c'est un membre ou un pro
+    /**
+     * Permet de lire un choix double
+     * @return le choix entré
+     */
     private int choixMenu() {
     	gymService.printTypeClient();
     	switch (gymService.menuUserInput(GymService.NOMBRE_CAS_DUTILISATION)) {
@@ -360,6 +382,10 @@ public class GymController {
     }
     
     
+    /**
+     * Permet au membre de payer son adhésion
+     * @param numeroClient Le numéro du Client courant
+     */
     private void paiementCompte(Long numeroClient) {
     	Membre membre = membres.getMembre(numeroClient);
     	gymService.printPaiementInput();
@@ -369,6 +395,9 @@ public class GymController {
     	
     }
     
+    /**
+     * Crée un nouveau compte
+     */
     private void nouveauCompte(){
         String[] informationsPersonnelles = informationsPersonnelles();
         gymService.printTypeClient();//(etat);
@@ -401,6 +430,10 @@ public class GymController {
         }
     }
 
+    /**
+     * Crée une nouvelle séance
+     * @param numeroProfessionnel Le numéro du professionnel créant la séance
+     */
     private void nouvelleSeance(Long numeroProfessionnel){
         try{
             seances.addListeSeances( new Seance(
@@ -426,6 +459,10 @@ public class GymController {
 
     }
 
+    /**
+     * Inscrit un membre à un séance
+     * @param numeroClient Le numéro du membre à inscrire
+     */
     private void inscriptionSeance(Long numeroClient) {
         String code = gymService.informationSeanceInput("code");
         String seanceCode = code.substring(0, 3);
@@ -452,6 +489,11 @@ public class GymController {
         }
     }
 
+    /**
+     * Confirme la présence d'un membre à une séance
+     * @param code Le code de la séance
+     * @param numeroMembre Le numéro du Membre 
+     */
     private void confirmationPresenceSeance(String code, Long numeroMembre){
     	long seanceCode = Long.parseLong(code);
     	long seanceIndex = Long.parseLong(code.substring(0, 3));
@@ -482,6 +524,10 @@ public class GymController {
         }
     }
 
+    /**
+     * Permet de vérifier l'adresse email et la validité du compte
+     * @return  le client si l'adresse est valide ou null
+     */
     private Client identificationClient(){
 
         String inputsa = gymService.informationPersonnellesInput("email");
@@ -499,6 +545,10 @@ public class GymController {
         return null;
     }
 
+    /**
+     * Permet de modifier les information personnelles
+     * @return Un tableau des informations
+     */
     private String[] informationsPersonnelles(){
         return new String[]{
                 gymService.informationPersonnellesInput("prenom"),
@@ -506,13 +556,34 @@ public class GymController {
                 gymService.informationPersonnellesInput("email")};
     }
 
+    /**
+     * Affiche la liste des séances
+     */
     private void consultationListeSeances(){
         List<Seance> listeSeaces = seances.getListeSeances();
         if(listeSeaces.isEmpty()){gymService.printAucuneSeances();}else{
             listeSeaces.stream().forEach(seance -> gymService.printInfosSeance(seance));
         }
     }
+    private void consultationListeSeances(Long code){
+        List<Seance> listeSeaces = seances.getListeSeances();
+        for(int i = 0; i < listeSeaces.size(); i++) {
+        	if (listeSeaces.get(i).getNumeroProfessionnel().equals(code)){
+        		List<JourSeance> cur = listeSeaces.get(i).getJourSeance();
+        		for(int j = 0; j < cur.size(); j++)
+        			if(cur.get(j).getDateJour().equals(LocalDateTime.now()))
+        				System.out.println("Seance numéro :"+cur.get(j).getCode()
+						+" du "+cur.get(i).getDateJour());
+        				
+        	}
+        }
+        
+    }
 
+    /**
+     * Permet de voir les inscrits aux séances du professionnel
+     * @param numeroProfessionnel Le numéro du professionnel
+     */
     private void consultationInscriptionsSeances(Long numeroProfessionnel){
         List<Seance> listeSeaces = seances.getListeSeances()
                 .stream()//filtre pour les seances de ce professionnel
@@ -523,6 +594,9 @@ public class GymController {
         }
     }
 
+    /**
+     * Crée le fichier TEF
+     */
     private void creationFichierTEF(){
         List<String> contenu = new ArrayList<>();
         contenu.add(GymService.TITRE_FICHIER_TEF + "\n\n");
@@ -548,6 +622,9 @@ public class GymController {
         gymService.printOperationComplete();
     }
 
+    /**
+     * Crée le rapport
+     */
     private void creationRapportSynthese(){
         List<String> contenu = new ArrayList<>();
         Double totalDesFrais = 0.0;
@@ -589,7 +666,7 @@ public class GymController {
         gymService.printOperationComplete();
     }
     /**
-     * @return
+     * @return la liste des séances proposées à la GYM
      */
     public Seances GetSeance() {
     	return this.seances;

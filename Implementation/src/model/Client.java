@@ -14,13 +14,14 @@ public abstract class Client {
     private GymService.Status status;
 
     /**
-     * @param prenom
-     * @param nom
-     * @param email
-     * @param gymService
-     * @param clients
-     * @param type
-     * @param status
+     * Construit une nouvelle instance de client
+     * @param prenom Le prénom du Client
+     * @param nom le nom du Client
+     * @param email l'email du Client
+     * @param gymService l'objet pour accéder aux méthodes de services
+     * @param clients la liste des clients
+     * @param type le type de client
+     * @param status le statut : valide, suspendu, Inexistant
      */
     public Client(String prenom, String nom, String email, GymService gymService, Clients clients, String type, GymService.Status status) {
         while(true){
@@ -41,39 +42,41 @@ public abstract class Client {
     }
 
     /**
-     * @return
+     * retourne le type de client
+     * @return le type de client
      */
     public String getType() {
         return type;
     }
 
     /**
-     * @return
+     * @return le numéro du Client
      */
     public Long getNumeroClient() {
         return this.numero;
     }
 
     /**
-     * @return
+     * @return le statut actuel du Client
      */
     public GymService.Status getStatus() {
         return status;
     }
 
     /**
-     * @param status
+     * Modifie le statut actuel du client
+     * @param status le statut actuel du client
      */
     public void setStatus(GymService.Status status) {this.status =status; }
 
     /**
-     * @return
+     * @return le prénom du client
      */
     public String getPrenom() {
         return prenom;
     }
     /**
-     * @return
+     * @return l'email du client
      */
     public String getMail() {
     	return this.email;
@@ -81,7 +84,7 @@ public abstract class Client {
    
 
     /**
-     * @return
+     * @return le nom du client
      */
     public String getNom() {
         return nom;

@@ -25,6 +25,22 @@ public class Seance {
     private String commentaire;
     private ArrayList<JourSeance> listeJourSeance;
 
+    /**
+     * Crée un nouveau Service
+     * @param titreSeance Le titre du Service
+     * @param code Le code (3 chiffres) du Service
+     * @param dateDebut La première date ou le service est proposé
+     * @param dateFin La dernière date ou le service est proposé
+     * @param heureSeance L'heure à laquelle le service est proposé
+     * @param recurHebdo La récurrence hebdomadaire du service
+     * @param capacite La capacité du service
+     * @param numeroProfessionnel Le numéro du professionnel proposant le service
+     * @param frais Les frais liés au service
+     * @param commentaire divers commentaires
+     * @param gymService Objet permettant d'avoir accès aux méthodes de services
+     * @param seances La liste des Service à laquelle dont l'instance fait partie
+     * @throws MauvaisFormatSeanceException si mauvais format
+     */
     public Seance(String titreSeance, String code,String dateDebut, String dateFin, String heureSeance, ArrayList<Boolean> recurHebdo, String capacite, Long numeroProfessionnel, String frais, String commentaire, GymService gymService, Seances seances) throws MauvaisFormatSeanceException{
         this.titre = titreSeance;
         this.heureCreation = LocalDateTime.now();
@@ -55,6 +71,10 @@ public class Seance {
         genererJour(gymService);
     }
     
+    /**
+     * Génère toutes les séances (JourSeance) en fonction des dates de début, de fin, et de la récurrence
+     * @param gymService L'objet permettant d'avoir accès aux méthodes de service
+     */
     private void genererJour(GymService gymService) {
     	LocalDate weekcounter = gymService.getFirstDayofWeek(this.dateDebut);
     	List<Integer> recurInt = getrecurInt();
@@ -80,24 +100,54 @@ public class Seance {
     		System.out.println("Toutes les séances n'ont pas pu être créées (+ de 99), la dernière date disponible est : " + currentDate);
     }
 
+    /**
+     * @return Le code du Service
+     */
     public Long getCode() {
         return this.code;
     }
 
+    /**
+     * @return Le titre du Service
+     */
     public String getTitre() {
         return this.titre;
     }
 
+    /**
+     * @return Les frais liés au Service
+     */
     public Double getFrais() {
         return this.frais;
     }
 
+    /**
+     * @return Le numéro du professionnel proposant le Service
+     */
     public Long getNumeroProfessionnel() {
         return numeroProfessionnel;
     }
 
-   
+    /**
+     * @return La liste de toutes les inscriptions à toutes les séances du Service
+     */
+    public ArrayList<InscriptionSeance> getListeInscriptionsSeance() {
+    	ArrayList<InscriptionSeance> rep = new ArrayList<InscriptionSeance>();
+    	ArrayList<InscriptionSeance> current = new ArrayList<InscriptionSeance>();
+    	for(int i = 0; i < listeJourSeance.size(); i++) {
+    		current = listeJourSeance.get(i).getInscriptionSeance();
+    		for(int j = 0; j < current.size(); j++) {
+    			rep.add(current.get(j));
+    		}
+    	}
+        return rep;
+    }
     
+    /**
+     * Crée une chaine de caractère représentant les différents jours ou sont données le Service
+     * @param recurHebdo la récurrence hebdomadaire (Array de boolean)
+     * @return La chaine de caractère représentant les différents jours ou sont données le Service
+     */
     public String affichageJour(ArrayList<Boolean> recurHebdo) {
     	String list = "";
     	for(int i=0;i<recurHebdo.size();i++) {
@@ -125,13 +175,23 @@ public class Seance {
     	}
     	return list;
     }
+    /**
+     * @return La date de début du Service
+     */
     public LocalDate getDateDebut() {
     	return this.dateDebut;
     }
+    /**
+     * @return La date de fin du Service
+     */
     public LocalDate getDatefin() {
     	return this.dateFin;
     }
     
+    /**
+     * Crée un tableau d'entier représentant les jours ou il a récurrence (ex : mardi, jeudi = [2,4])
+     * @return le tableau d'entier
+     */
     public List<Integer> getrecurInt(){
     	List<Integer> rep = new ArrayList<Integer>();
     	for(int i = 0; i < 7; i ++) {
@@ -141,11 +201,19 @@ public class Seance {
     	return rep;
     }
     
+    /**
+     * @return La liste des séances proposées pour ce service
+     */
     public List<JourSeance> getJourSeance(){
     	return this.listeJourSeance;
     }
     
     //affichage les 10 prochaines séances
+    /**
+     * Affiche les 10 prochaines séances
+     * @param listeJour La liste des séances à traiter
+     * @return Les 10 prochaines séances en fonction de la date actuelle
+     */
     public List<String> affichageCodeSeance(List<JourSeance> listeJour) {
     	List<String> listeCode= new ArrayList<String>();
     	LocalDate datecourrante = LocalDate.now();
@@ -164,6 +232,10 @@ public class Seance {
     	return listeCode;
     }
     
+    /**
+     * @param i l'index de la séance
+     * @return l'objet JourSéance représentant une séance proposé pour le Service
+     */
     public JourSeance getJourSeance(int i) {
     	return listeJourSeance.get(i);
     }

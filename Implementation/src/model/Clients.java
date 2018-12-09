@@ -10,8 +10,9 @@ public class Clients {
     private Professionnels professionnels;
 
     /**
-     * @param membres
-     * @param professionnels
+     * Crée une nouvelle liste de clients
+     * @param membres La liste des membres
+     * @param professionnels La listes des professionnels
      */
     public Clients(Membres membres, Professionnels professionnels) {
         this.membres = membres;
@@ -21,7 +22,7 @@ public class Clients {
     }
 
     /**
-     * @return
+     * @return La liste des clients
      */
     public List<Client> getListeClients() {
         this.listeClients.addAll(this.membres.getListeMembres());
@@ -30,8 +31,8 @@ public class Clients {
     }
 
     /**
-     * @param numeroClient
-     * @return
+     * @param numeroClient Le numéro du client
+     * @return l'objet Client correspondant
      */
     public Client getClient(Long numeroClient){
         return this.getListeClients()//TODO solve bug ou les membres osnt ajoute plusieurs fois ..
@@ -40,6 +41,10 @@ public class Clients {
                 .findAny()
                 .orElse(null);
     }
+    /**
+     * @param email L'email du client
+     * @return l'objet Client correspondant
+     */
     public Client getClient(String email){
         return this.getListeClients()//TODO solve bug ou les membres osnt ajoute plusieurs fois ..
                 .stream()

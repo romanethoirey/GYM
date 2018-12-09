@@ -11,11 +11,12 @@ public class PresenceSeance {
     private String commentaire;
 
     /**
-     * @param numeroProfessionnel
-     * @param numeroMembre
-     * @param codeService
-     * @param commentaire
-     * @throws MauvaisFormatPresenceSeanceException
+     * Crée un nouvel enregistrement de confirmation de présence
+     * @param numeroProfessionnel Le numéro du pro proposant la séance
+     * @param numeroMembre Le numéro du membre qui confirmme sa présence
+     * @param codeService Le code de la séance proposée
+     * @param commentaire divers commentaires
+     * @throws MauvaisFormatPresenceSeanceException si mauvais format
      */
     public PresenceSeance(Long numeroProfessionnel, Long numeroMembre, Long codeService, String commentaire) throws MauvaisFormatPresenceSeanceException{
         if((numeroMembre+"").length() != 9 ||//si longueur invalide

@@ -15,12 +15,13 @@ public class InscriptionSeance {
     private String commentaire;
 
     /**
-     * @param dateSeance
-     * @param numeroProfessionnel
-     * @param numeroMembre
-     * @param codeService
-     * @param commentaire
-     * @throws MauvaisFormatInscriptionSeanceException
+     * Construit un nouvel enregistrement pour une inscription
+     * @param dateSeance La date de la séance 
+     * @param numeroProfessionnel Le numéro du professionnel ayant proposé la séance
+     * @param numeroMembre Le numéro du membre s'inscrivant
+     * @param codeService Le code du Service proposé
+     * @param commentaire Divers commentaires
+     * @throws MauvaisFormatInscriptionSeanceException si les codes client ne font pas 9 chiffres, CodeService != 7 ou 100+ carac pour les commentaires
      */
     public InscriptionSeance(String dateSeance, Long numeroProfessionnel, Long numeroMembre, int codeService, String commentaire) throws MauvaisFormatInscriptionSeanceException {
 
@@ -39,14 +40,14 @@ public class InscriptionSeance {
     }
 
     /**
-     * @return
+     * @return le numéro du membre
      */
     public Long getNumeroMembre() {
         return numeroMembre;
     }
     
     /**
-     * @return
+     * @return le code du Service proposé
      */
     public int getCodeService() {
     	return codeSeance;

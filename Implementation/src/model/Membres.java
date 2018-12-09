@@ -8,29 +8,31 @@ public class Membres {
     private List<Membre> listeMembres;
 
     /**
-     * 
+     * Crée une nouvelle liste de membre
      */
     public Membres() {
         this.listeMembres = new ArrayList<Membre>();
     }
 
     /**
-     * @return
+     * @return la liste des membres
      */
     public List<Membre> getListeMembres() {
         return listeMembres;
     }
 
     /**
-     * @param Membre
+     * Ajoute un nouveau membre à la liste
+     * @param Membre le membre à ajouter
      */
     public void addListeMembres(Membre Membre) {
         listeMembres.add(Membre);
     }
 
     /**
-     * @param numeroMembre
-     * @return
+     * Retourne un membre en fonction de son numéro 
+     * @param numeroMembre Le numéro à chercher
+     * @return L'objet membre correspondant
      */
     public Membre getMembre(Long numeroMembre){
         return listeMembres
